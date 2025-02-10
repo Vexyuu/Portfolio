@@ -165,7 +165,8 @@ table {
     rgb(255, 255, 255),
     rgba(255, 255, 255, 0)
   ); */
-  min-height: 500px;
+  /* min-height: 500px; */
+  margin-bottom: 10vh;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -182,7 +183,8 @@ table {
   box-shadow: 0px 0px 50px #919ee9;
 } */
 
-.qualite-box {
+.qualites-box,
+.competences-box {
   margin: 0 auto;
   background-color: white;
   max-width: max-content;
@@ -190,14 +192,23 @@ table {
   border-radius: 30px;
 }
 
-.qualite-box ul {
+#qualites-title,
+#competences-title {
+  font-size: 30px;
+  text-align: center;
+  padding-top: 20px;
+  border-bottom: 3px solid black;
+}
+
+.qualites-box ul,
+.competences-box ul {
   padding: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-.qualite-box li {
+.qualites-box li {
   margin: 20px;
   padding: 10px;
   border: 2px solid black;
@@ -205,6 +216,49 @@ table {
   font-size: 20px;
 }
 
-#competences {
+.competences-box li {
+  margin: 20px;
+  font-size: 5vh;
+}
+
+.competences-title-2 {
+  margin: auto;
   text-align: center;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 30px;
+  width: max-content;
+}
+
+/*-------------------------Style Projets.html-------------------------*/
+
+#projets-title-1 {
+  background-color: #f7f7f7;
+  text-align: center;
+  margin-top: 15vh;
+}
+
+#projets-box h1 {
+  margin: 0 auto;
+}
+
+.shape-1 {
+  position: relative;
+  background-color: red;
+  width: 100px;
+  height: 150vh;
+  left: 65%;
+  bottom: 55vh;
+  transform: rotate(75deg);
+}
+
+.shape-2 {
+  position: relative;
+  background-color: blue;
+  width: 100px;
+  height: 150vh;
+  /* right: 65%;
+  top: 0px;
+  bottom: 55vh; */
+  transform: rotate(-75deg);
 }

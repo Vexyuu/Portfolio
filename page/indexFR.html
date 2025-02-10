@@ -12,30 +12,37 @@
 </head>
 
 <body>
-    <nav class="navigation" role="banner">
-        <div class="title">
-            <span>Killian Fievet</span>
-        </div>
-        <div class="menu" role="navigation">
-            <span>
-                <a href="#about">A propos</a>
-            </span>
-            <span>
-                <a href="#parcours">Parcours</a>
-            </span>
-            <span>
-                <a href="#projets">Projets</a>
-            </span>
-            <span>
-                <a href="#veille">Veille technologique</a>
-            </span>
-            <span>
-                <a href="#contact">Contact</a>
-            </span>
-        </div>
-    </nav>
-    <div id="langue"><a href="./indexEN.html">EN</a></div>
+    <!--Header-->
+    <header>
+        <nav class="navigation" role="banner">
+            <div class="title">
+                <span>Killian Fievet</span>
+            </div>
+            <div class="menu" role="navigation">
+                <span>
+                    <a href="#about">A propos</a>
+                </span>
+                <span>
+                    <a href="#parcours">Parcours</a>
+                </span>
+                <span>
+                    <a href="./projets.html">Projets</a>
+                </span>
+                <span>
+                    <a href="#veille">Veille technologique</a>
+                </span>
+                <span>
+                    <a href="#contact">Contact</a>
+                </span>
+                <span>
+                    <a href="#certification">Certification</a>
+                </span>
+            </div>
+        </nav>
+        <div id="langue"><a href="./indexEN.html">EN</a></div>
     </header>
+
+    <!--Section 1-->
     <div id="about"></div>
     <section>
         <div class="container">
@@ -59,8 +66,8 @@
                         <td class="photo"><img src="../image/photo.jpg" width="200px"></td>
                     </tr>
                     <tr>
-                        <td class="infoPresentation">Je m'appelle Killian, développeur junior et étudiant à Aurlom de
-                            Paris en deuxième année de BTS SIO dans l'option SLAM spécialisée pour le développement.<br>
+                        <td class="infoPresentation">Je m'appelle Killian, développeur junior et étudiant à Aurlom
+                            Paris en deuxième année de BTS SIO option SLAM spécialisée en développement.<br>
                             <!-- Je suis passionné par le développement web et je suis en train de développer mes compétences
                             dans ce domaine.-->
                         </td>
@@ -77,10 +84,11 @@
         </div>
     </section>
 
+    <!--Section 2-->
     <section>
         <div class="container2">
-            <!-- <h1 id="parcours">• Parcours 🤵</h1> -->
-            <div class="qualite-box">
+            <div class="qualites-box">
+                <h1 id="qualites-title">Mes qualités</h1>
                 <ul>
                     <li>Inspiration</li>
                     <li>Créativité</li>
@@ -88,32 +96,30 @@
                     <li>Dynamique</li>
                 </ul>
             </div>
+        </div>
 
-        </div>
-    </section>
-    <section class="container3">
-        <h1 id="competences">Mes compétences</h1>
-        <div class="competences-list">
-            <h1>Languages</h1>
+        <div class="competences-box">
+            <h1 id="competences-title">Mes compétences</h1>
+            <h2 class="competences-title-2">Languages</h2>
             <ul>
-                <li>HTML5</li>
-                <li>CSS3</li>
-                <li>JavaScript</li>
-                <li>PHP</li>
-                <li>MySQL</li>
-                <li>Git</li>
-                <li>Python</li>
-                <li>C#</li>
+                <li><i class="fa-brands fa-html5 fa-xl" style="color: #f06529;"></i></li> <!--HTML5-->
+                <li><i class="fa-brands fa-css3 fa-xl" style="color: #38a9ff;"></i></li> <!--CSS3-->
+                <li><i class="fa-brands fa-js fa-xl" style="color: #FFD43B;"></i></li> <!--JavaScript-->
+                <li><i class="fa-brands fa-php fa-xl"></i></li> <!--PHP-->
+                <li><i class="fa-solid fa-database fa-xl"></i></li> <!--MySQL-->
+                <li><img src="../image/Python.png" width="60px"></li> <!--Python-->
+                <li><img src="../image/C_sharp.png" width="60px"></li> <!--C#-->
             </ul>
-            <h1>Outils</h1>
+            <h2 class="competences-title-2">Outils</h2>
             <ul>
-                <li>Visual Studio Code</li>
-                <li>Visual Studio</li>
-                <li>Git</li>
-                <li>WampServer</li>
+                <li><img src="../image/VsCode.png" width="60px"></li> <!--Visual Studio Code-->
+                <li><img src="../image/Vs2022.png" width="60px"></li> <!--Visual Studio 2022-->
+                <li><i class="fa-brands fa-git fa-xl"></i></li> <!--Git-->
+                <li><img src="../image/WampServer.png" width="60px"></li> <!--WampServer-->
             </ul>
         </div>
     </section>
+
 
 </body>
 
