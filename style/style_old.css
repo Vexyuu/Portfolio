@@ -27,12 +27,10 @@ body {
 
 .navigation a {
   color: white;
-  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .navigation a:hover {
   color: #919ee9;
-  transform: scale(1.1);
 }
 
 .menu span {
@@ -50,19 +48,20 @@ body {
 #langue a:hover {
   text-decoration: none;
   color: #919ee9;
+  position: fixed;
+  margin: 80px 60px;
+  top: 0;
+  right: 0;
 }
 
 .container {
-  margin: 120px 10px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  align-items:center;
-  justify-content: center;
+  margin: 150px 10px;
+  display: flex;
 }
 
 .infoBox {
-  margin-left: 20px;
+  margin: 0 auto;
+  margin-top: 125px;
   color: white;
 }
 
@@ -72,6 +71,7 @@ body {
 }
 
 .infoBox h3 {
+  margin: 0;
   font-size: 25px;
 }
 
@@ -84,9 +84,9 @@ body {
 }
 
 #CV {
-  width: max-content;
+  width: 200px;
   background-color: white;
-  margin-top: 40px;
+  margin: 60px 0px 0px 150px;
   text-align: center;
   padding: 7px;
   border-radius: 30px;
@@ -95,30 +95,26 @@ body {
 #CV a {
   color: black;
   font-size: 25px;
-  padding: 7px 20px;
+  padding: 7px 80px;
   border-radius: 30px;
-  transition: transform 0.3s ease-in-out;
 }
 
 #CV:hover {
-  /* box-shadow: 0 0 30px rgba(145, 158, 233, 0.7); */
-  transform: scale(1.05);
+  box-shadow: 0px 0px 50px #6b7ee9;
 }
 
 #CV a:hover {
-  /* color: #6b7ee9; */
+  color: #6b7ee9;
   cursor: pointer;
 }
 
 .box {
   background-color: white;
-  width: max-content;
-  height: max-content;
+  width: 500px;
+  height: 600px;
   margin: auto;
-  padding: 40px;
   border-radius: 30px;
-  /* box-shadow: 0px 0px 50px #919ee9; */
-  box-shadow: 0 0 30px rgba(145, 158, 233, 0.5);
+  box-shadow: 0px 0px 50px #919ee9;
 }
 
 table {
@@ -126,9 +122,14 @@ table {
   margin: 0 auto;
 }
 
+.presentation {
+  padding: 30px 0px 20px 0px;
+  font-size: 25px;
+}
+
 .photo img {
-  box-shadow: 0 0 30px rgba(145, 158, 233, 0.7);
   border-radius: 180px;
+  box-shadow: 5px 5px 15px black;
   margin-bottom: 30px;
 }
 
@@ -139,7 +140,7 @@ table {
   font-size: 15px;
   border-radius: 30px;
   border: none;
-  box-shadow: 0 0 15px rgba(145, 158, 233, 0.7);
+  box-shadow: 5px 5px 15px black;
 }
 
 .reseaux {
@@ -149,12 +150,12 @@ table {
 .reseaux img {
   width: 50px;
   border-radius: 180px;
-  box-shadow: 0 0 15px rgba(145, 158, 233, 0.7);
+  box-shadow: 0px 0px 50px #919ee9;
   margin: 35px 20px;
 }
 
 .reseaux img:hover {
-  box-shadow: 0 0 15px #6b7ee9;
+  box-shadow: 0px 0px 50px #6b7ee9;
   cursor: pointer;
 }
 
@@ -169,14 +170,25 @@ table {
   background-size: cover;
   background-repeat: no-repeat;
 }
+/* 
+#parcours {
+  width: 200px;
+  padding: 7px;
+  font-size: 30px;
+  margin-left: 60px;
+  text-align: center;
+  background-color: white;
+  border-radius: 30px;
+  border: none;
+  box-shadow: 0px 0px 50px #919ee9;
+} */
 
 .qualites-box,
 .competences-box {
   margin: 0 auto;
   background-color: white;
-  width: clamp(250px, 100%, 750px);
-  padding: 20px;
-  box-shadow: 0 0 15px rgba(145, 158, 233, 0.5);
+  max-width: max-content;
+  box-shadow: 0px 0px 50px #919ee9;
   border-radius: 30px;
 }
 
@@ -249,49 +261,4 @@ table {
   top: 0px;
   bottom: 55vh; */
   transform: rotate(-75deg);
-}
-
-
-/*-------------------------Responsive design-------------------------*/
-@media (max-width: 768px) {
-  .container {
-    grid-template-columns: 1fr;
-  }
-
-  .infoBox h1 {
-    font-size: 40px;
-  }
-
-  .infoBox h3 {
-    font-size: 20px;
-  }
-
-  .box {
-    padding: 20px;
-  }
-
-  .qualites-box ul,
-  .competences-box ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .qualites-box li,
-  .competences-box li {
-    margin: 10px 0;
-    font-size: 18px;
-  }
-
-  #CV {
-    width: auto;
-    padding: 10px 40px;
-  }
-
-  .photo img {
-    width: 150px;
-  }
-
-  #langue {
-    margin: 30px;
-  }
 }
