@@ -1,12 +1,24 @@
+/* Variables */
+:root {
+  --primary-color: #919ee9;
+  --secondary-color: #ffffff;
+  --background-color: #121212;
+  --text-color: #ffffff;
+  --hover-color: #7a89e0;
+  --shadow-color: rgba(0, 0, 0, 0.2);
+  --font-main: 'Poppins', sans-serif;
+}
+
 * {
   list-style: none;
   text-decoration: none;
 }
 
 body {
-  background-color: white;
+  background-color: var(--background-color);
+  font-family: var(--font-main);
   margin: 0;
-  font-family: lexend;
+  padding: 0;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url(../image/background.jpg);
   background-size: cover;
@@ -16,30 +28,38 @@ body {
 .navigation {
   position: fixed;
   top: 0;
-  width: 96.5%;
-  margin: 0px 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 90%;
+  margin: 0;
   padding: 20px;
   color: white;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   border-bottom: solid 1px white;
 }
 
-.navigation a {
-  color: white;
-  transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.navigation a:hover {
-  color: #919ee9;
-  transform: scale(1.1);
+.menu {
+  display: flex;
+  gap: 20px;
 }
 
 .menu span {
   padding: 0px 10px;
 }
 
-#langue a {
+.navigation a {
+  color: var(--secondary-color);
+  transition: color 0.3s;
+}
+
+.navigation a:hover {
+  color: var(--hover-color);
+}
+
+/* #langue a {
   color: white;
   position: fixed;
   margin: 80px 60px;
@@ -50,7 +70,7 @@ body {
 #langue a:hover {
   text-decoration: none;
   color: #919ee9;
-}
+} */
 
 .container {
   margin: 120px 10px;
@@ -64,6 +84,7 @@ body {
 .infoBox {
   margin-left: 20px;
   color: white;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
 }
 
 .infoBox h1 {
@@ -90,23 +111,25 @@ body {
   text-align: center;
   padding: 7px;
   border-radius: 30px;
-  box-shadow: 0px 0px 50px #919ee9;
+  box-shadow: 0 0 15px #919ee9;
 }
 #CV a {
   color: black;
   font-size: 25px;
   padding: 7px 20px;
   border-radius: 30px;
-  transition: transform 0.3s ease-in-out;
+  /* transition: transform 0.3s ease-in-out; */
 }
 
 #CV:hover {
-  /* box-shadow: 0 0 30px rgba(145, 158, 233, 0.7); */
-  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(145, 158, 233, 0.7);
+  cursor: pointer;
+  /* transform: scale(1.05); */
 }
 
+
 #CV a:hover {
-  /* color: #6b7ee9; */
+  color:rgba(52, 64, 129, 0.7);
   cursor: pointer;
 }
 
@@ -133,7 +156,6 @@ table {
 }
 
 .infoPresentation {
-  padding: 15px;
   width: 350px;
   text-align: center;
   font-size: 15px;
@@ -164,7 +186,7 @@ table {
     rgb(255, 255, 255),
     rgba(255, 255, 255, 0)
   ); */
-  /* min-height: 500px; */
+  /* min-height: max-content; */
   margin-bottom: 10vh;
   background-size: cover;
   background-repeat: no-repeat;
@@ -252,8 +274,53 @@ table {
 }
 
 
+/*-------------------------Style parcours.html-------------------------*/
+
+#parcours-title-1 {
+  background-color: #f7f7f7;
+  text-align: center;
+  margin-top: 15vh;
+}
+
+#parcours-box h1 {
+  margin: 0 auto;
+}
+
+.shape-1 {
+  position: relative;
+  background-color: red;
+  width: 100px;
+  height: 150vh;
+  left: 65%;
+  bottom: 55vh;
+  transform: rotate(75deg);
+}
+
+.shape-2 {
+  position: relative;
+  background-color: blue;
+  width: 100px;
+  height: 150vh;
+  /* right: 65%;
+  top: 0px;
+  bottom: 55vh; */
+  transform: rotate(-75deg);
+}
+
+
+
 /*-------------------------Responsive design-------------------------*/
 @media (max-width: 768px) {
+  .navigation {
+    flex-direction: column;
+    align-items: center;
+  }
+  .menu {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
   .container {
     grid-template-columns: 1fr;
   }
