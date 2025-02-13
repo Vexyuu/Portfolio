@@ -1,12 +1,24 @@
+/* Variables */
+:root {
+  --primary-color: #919ee9;
+  --secondary-color: #ffffff;
+  --background-color: #121212;
+  --text-color: #ffffff;
+  --hover-color: #7a89e0;
+  --shadow-color: rgba(0, 0, 0, 0.2);
+  --font-main: 'Poppins', sans-serif;
+}
+
 * {
   list-style: none;
   text-decoration: none;
 }
 
 body {
-  background-color: white;
+  background-color: var(--background-color);
+  font-family: var(--font-main);
   margin: 0;
-  font-family: lexend;
+  padding: 0;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url(../image/background.jpg);
   background-size: cover;
@@ -16,30 +28,38 @@ body {
 .navigation {
   position: fixed;
   top: 0;
-  width: 96.5%;
-  margin: 0px 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 90%;
+  margin: 0;
   padding: 20px;
   color: white;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   border-bottom: solid 1px white;
 }
 
-.navigation a {
-  color: white;
-  transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.navigation a:hover {
-  color: #919ee9;
-  transform: scale(1.1);
+.menu {
+  display: flex;
+  gap: 20px;
 }
 
 .menu span {
   padding: 0px 10px;
 }
 
-#langue a {
+.navigation a {
+  color: var(--secondary-color);
+  transition: color 0.3s;
+}
+
+.navigation a:hover {
+  color: var(--hover-color);
+}
+
+/* #langue a {
   color: white;
   position: fixed;
   margin: 80px 60px;
@@ -50,7 +70,7 @@ body {
 #langue a:hover {
   text-decoration: none;
   color: #919ee9;
-}
+} */
 
 .container {
   margin: 120px 10px;
@@ -64,6 +84,7 @@ body {
 .infoBox {
   margin-left: 20px;
   color: white;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
 }
 
 .infoBox h1 {
@@ -90,23 +111,25 @@ body {
   text-align: center;
   padding: 7px;
   border-radius: 30px;
-  box-shadow: 0px 0px 50px #919ee9;
+  box-shadow: 0 0 15px #919ee9;
 }
 #CV a {
   color: black;
   font-size: 25px;
   padding: 7px 20px;
   border-radius: 30px;
-  transition: transform 0.3s ease-in-out;
+  /* transition: transform 0.3s ease-in-out; */
 }
 
 #CV:hover {
-  /* box-shadow: 0 0 30px rgba(145, 158, 233, 0.7); */
-  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(145, 158, 233, 0.7);
+  cursor: pointer;
+  /* transform: scale(1.05); */
 }
 
+
 #CV a:hover {
-  /* color: #6b7ee9; */
+  color:rgba(52, 64, 129, 0.7);
   cursor: pointer;
 }
 
@@ -133,7 +156,6 @@ table {
 }
 
 .infoPresentation {
-  padding: 15px;
   width: 350px;
   text-align: center;
   font-size: 15px;
@@ -164,7 +186,7 @@ table {
     rgb(255, 255, 255),
     rgba(255, 255, 255, 0)
   ); */
-  /* min-height: 500px; */
+  /* min-height: max-content; */
   margin-bottom: 10vh;
   background-size: cover;
   background-repeat: no-repeat;
@@ -218,6 +240,145 @@ table {
   width: max-content;
 }
 
+/*-------------------------Style parcours.html-------------------------*/
+#section-parcours {
+  /* position: relative; */
+  /* min-height: 150vh; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10vh 5vw;
+}
+
+#parcours-title-1 {
+  /* position: absolute; */
+  /* top: 20%; */
+  /* left: 50%; */
+  /* transform: translate(-50%, -50%); */
+  font-size: 3rem;
+  font-style: italic;
+  color: white;
+  background-color: #919ee9;
+  padding: 15px 40px;
+  border-radius: 30px 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+/* .parcours-shape-1, .parcours-shape-2 {
+  position: absolute;
+  width: 100%;
+  height: 250vh;
+  background-color: white;
+}
+
+.parcours-shape-1 {
+  top: 0;
+  /* clip-path: polygon(50% 30%, 100% 15%, 100% 100%, 0 100%, 0 15%); OLD
+  clip-path: polygon(50% 30%, 100% 25%, 100% 100%, 0 100%, 0 25%);
+} */
+
+#parcours-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  background-color: white;
+  width: 80%;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.parcours-column {
+  flex: 1;
+  min-width: 300px;
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.parcours-column h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  border-bottom: 4px solid #919ee9;
+  padding-bottom: 12px;
+}
+
+.parcours-column p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 12px;
+  color: #444;
+}
+
+.parcours-column strong {
+  color: #222;
+  font-weight: 700;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 20px;
+  /* border-left: 4px solid #b71c1c; */
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 8px; /* Ajuste pour aligner la barre avec les cercles */
+  top: 0;
+  width: 4px; /* Largeur de la barre */
+  height: 100%;
+  background-color: rgb(155, 13, 13);
+}
+
+.timeline-item {
+  /* display: flex;
+  align-items: flex-start; */
+  margin-bottom: 20px;
+  position: relative;
+}
+
+
+.circle {
+  width: 14px;
+  height: 14px;
+  border: 3px solid #919ee9;
+  border-radius: 50%;
+  position: absolute;
+  left: -20px;
+  top: 5px;
+  background-color: white;
+}
+
+.content {
+  padding-left: 20px;
+  border-radius: 8px;
+}
+
+.date {
+  background: #bdbdbd;
+  padding: 6px 12px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  color: white;
+  display: inline-block;
+  margin: 10px 0;
+}
+
+/* .parcours-column p::before {
+  content: "🎓";
+  margin-right: 8px;
+}
+
+#parcours-pro p::before {
+  content: "💼";
+} */
+
 /*-------------------------Style Projets.html-------------------------*/
 
 #projets-title-1 {
@@ -251,9 +412,18 @@ table {
   transform: rotate(-75deg);
 }
 
-
 /*-------------------------Responsive design-------------------------*/
 @media (max-width: 768px) {
+  .navigation {
+    flex-direction: column;
+    align-items: center;
+  }
+  .menu {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
   .container {
     grid-template-columns: 1fr;
   }
@@ -293,5 +463,10 @@ table {
 
   #langue {
     margin: 30px;
+  }
+
+  #parcours-box {
+    flex-direction: column;
+    align-items: center;
   }
 }
