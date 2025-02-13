@@ -412,6 +412,45 @@ table {
   transform: rotate(-75deg);
 }
 
+<<<<<<< HEAD
+=======
+
+/*-------------------------Style parcours.html-------------------------*/
+
+#parcours-title-1 {
+  background-color: #f7f7f7;
+  text-align: center;
+  margin-top: 15vh;
+}
+
+#parcours-box h1 {
+  margin: 0 auto;
+}
+
+.shape-1 {
+  position: relative;
+  background-color: red;
+  width: 100px;
+  height: 150vh;
+  left: 65%;
+  bottom: 55vh;
+  transform: rotate(75deg);
+}
+
+.shape-2 {
+  position: relative;
+  background-color: blue;
+  width: 100px;
+  height: 150vh;
+  /* right: 65%;
+  top: 0px;
+  bottom: 55vh; */
+  transform: rotate(-75deg);
+}
+
+
+
+>>>>>>> b5829260bd78a77ea0777ceadfb0edd217f311ab
 /*-------------------------Responsive design-------------------------*/
 @media (max-width: 768px) {
   .navigation {
