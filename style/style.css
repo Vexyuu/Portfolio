@@ -39,6 +39,8 @@ body {
   justify-content: space-between;
   align-items: center;
   border-bottom: solid 1px white;
+  /* background: transparent; */
+  transition: all 0.3s ease-in-out;
 }
 
 .menu {
@@ -59,18 +61,10 @@ body {
   color: var(--hover-color);
 }
 
-/* #langue a {
-  color: white;
-  position: fixed;
-  margin: 80px 60px;
-  top: 0;
-  right: 0;
+.navigation.scrolled {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 10px;
 }
-
-#langue a:hover {
-  text-decoration: none;
-  color: #919ee9;
-} */
 
 .container {
   margin: 120px 10px;
@@ -370,46 +364,184 @@ table {
   margin: 10px 0;
 }
 
-/* .parcours-column p::before {
-  content: "🎓";
-  margin-right: 8px;
-}
-
-#parcours-pro p::before {
-  content: "💼";
-} */
-
 /*-------------------------Style Projets.html-------------------------*/
 
+/* Section projets */
+#section-projets {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10vh 5vw;
+}
+
 #projets-title-1 {
-  background-color: #f7f7f7;
+  font-size: 3rem;
+  font-style: italic;
+  color: white;
+  background-color: #919ee9;
+  padding: 15px 40px;
+  border-radius: 30px 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
   text-align: center;
-  margin-top: 15vh;
 }
 
-#projets-box h1 {
-  margin: 0 auto;
+/* Description générale */
+#description-generale {
+  max-width: 800px;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #ddd;
+  margin-bottom: 40px;
 }
 
-.shape-1 {
+/* Conteneur global des projets */
+.projets-box {
+  display: flex;
+  flex-direction: column;
+  gap: 50px; /* Espacement entre chaque projet */
+  width: 90%;
+  max-width: 1400px;
+}
+
+/* Projets */
+.projet {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.projet:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Alternance entre gauche et droite */
+.projet-left {
+  flex-direction: row-reverse;
+}
+
+.projet-right {
+  flex-direction: row-reverse;
+}
+
+/* Description */
+.description-projet {
+  flex: 1;
+  padding: 20px;
+  color: white;
+}
+
+.description-projet h2 {
+  color: #919ee9;
+}
+
+.description-projet h3 {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.description-projet p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.description-projet a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  color: white;
+  background-color: #919ee9;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.3s ease-in-out;
+}
+
+.description-projet a:hover {
+  background-color: #6f82e6;
+}
+
+/* Images */
+.projet-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .projet-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  width: 300px; Ajustable selon tes préférences 
+} */
+
+.carousel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
   position: relative;
-  background-color: red;
-  width: 100px;
-  height: 150vh;
-  left: 65%;
-  bottom: 55vh;
-  transform: rotate(75deg);
 }
 
-.shape-2 {
-  position: relative;
-  background-color: blue;
-  width: 100px;
-  height: 150vh;
-  /* right: 65%;
-  top: 0px;
-  bottom: 55vh; */
-  transform: rotate(-75deg);
+.carousel img {
+  object-fit: cover;
+  border-radius: 10px;
+  transition: opacity 0.5s ease-in-out;
+  width: 80%;
+}
+
+.carousel button {
+  position: absolute;
+  /* top: 50%;
+  transform: translateY(-50%); */
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.carousel button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+  left: 2px;
+}
+
+.next {
+  right: 2px;
+}
+
+/* Style des indicateurs */
+.carousel-indicators {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  background-color: gray;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+.indicator.active {
+  background-color: white;
 }
 
 /*-------------------------Responsive design-------------------------*/
@@ -468,5 +600,14 @@ table {
   #parcours-box {
     flex-direction: column;
     align-items: center;
+  }
+
+  .projet {
+    flex-direction: column !important;
+    text-align: center;
+  }
+
+  .projet-image img {
+    width: 80%;
   }
 }
