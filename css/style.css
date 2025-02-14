@@ -4,7 +4,7 @@
   --secondary-color: #ffffff;
   --background-color: #121212;
   --text-color: #ffffff;
-  --hover-color: #7a89e0;
+  --hover-color: #6f82e6;
   --shadow-color: rgba(0, 0, 0, 0.2);
   --font-main: 'Poppins', sans-serif;
 }
@@ -41,6 +41,7 @@ body {
   border-bottom: solid 1px white;
   /* background: transparent; */
   transition: all 0.3s ease-in-out;
+  z-index: 100;
 }
 
 .menu {
@@ -48,13 +49,10 @@ body {
   gap: 20px;
 }
 
-.menu span {
-  padding: 0px 10px;
-}
-
 .navigation a {
   color: var(--secondary-color);
   transition: color 0.3s;
+  padding: 0px 10px;
 }
 
 .navigation a:hover {
@@ -97,7 +95,7 @@ body {
 #paragrapheStart {
   margin-top: 50px;
 }
-
+/* 
 #CV {
   width: max-content;
   background-color: white;
@@ -106,36 +104,52 @@ body {
   padding: 7px;
   border-radius: 30px;
   box-shadow: 0 0 15px #919ee9;
-}
-#CV a {
+} */
+
+/* #CV a {
   color: black;
   font-size: 25px;
   padding: 7px 20px;
   border-radius: 30px;
-  /* transition: transform 0.3s ease-in-out; */
+  /* transition: transform 0.3s ease-in-out;
 }
 
 #CV:hover {
   box-shadow: 0 0 15px rgba(145, 158, 233, 0.7);
   cursor: pointer;
-  /* transform: scale(1.05); */
+  /* transform: scale(1.05);
 }
 
 
 #CV a:hover {
   color:rgba(52, 64, 129, 0.7);
   cursor: pointer;
-}
+} */
 
-.box {
+/* .box {
   background-color: white;
   width: max-content;
   height: max-content;
   margin: auto;
   padding: 40px;
   border-radius: 30px;
-  /* box-shadow: 0px 0px 50px #919ee9; */
   box-shadow: 0 0 30px rgba(145, 158, 233, 0.5);
+} */
+
+.box {
+  background-color: rgba(255, 255, 255, 0.1);
+  width: max-content;
+  height: max-content;
+  margin: auto;
+  padding: 40px;
+  border-radius: 30px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.box:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
 }
 
 table {
@@ -150,15 +164,25 @@ table {
 }
 
 .infoPresentation {
+  color: var(--text-color);
   width: 350px;
   text-align: center;
   font-size: 15px;
   border-radius: 30px;
   border: none;
-  box-shadow: 0 0 15px rgba(145, 158, 233, 0.7);
 }
 
-.reseaux {
+/* .infoPresentation {
+  width: 350px;
+  text-align: center;
+  font-size: 15px;
+  border-radius: 30px;
+  border: none;
+  background-color: var(--primary-color);
+  box-shadow: 0 0 15px rgba(145, 158, 233, 0.7);
+} */
+
+/* .reseaux {
   text-align: center;
 }
 
@@ -167,11 +191,18 @@ table {
   border-radius: 180px;
   box-shadow: 0 0 15px rgba(145, 158, 233, 0.7);
   margin: 35px 20px;
+} */
+
+/* .reseaux img:hover {
+  box-shadow: 0 0 15px #6b7ee9;
+} */
+
+.reseaux {
+  margin-top: 20px;
 }
 
-.reseaux img:hover {
-  box-shadow: 0 0 15px #6b7ee9;
-  cursor: pointer;
+.reseaux a {
+  margin: 10px;
 }
 
 .container2 {
@@ -451,19 +482,19 @@ table {
   line-height: 1.5;
 }
 
-.description-projet a {
+.description-projet a, .infoBox a, .reseaux a {
   display: inline-block;
   margin-top: 10px;
   padding: 10px 20px;
-  color: white;
-  background-color: #919ee9;
+  color: var(--text-color);
+  background-color: var(--primary-color);
   text-decoration: none;
   border-radius: 8px;
   transition: background 0.3s ease-in-out;
 }
 
-.description-projet a:hover {
-  background-color: #6f82e6;
+.description-projet a:hover, .infoBox a:hover, .reseaux a:hover {
+  background-color: var(--hover-color);
 }
 
 /* Images */
