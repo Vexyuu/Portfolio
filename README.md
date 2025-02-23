@@ -4,7 +4,7 @@ Bienvenue sur mon portfolio ! Ce site présente mes différents projets en déve
 
 ## 🚀 Aperçu
 
-🔗 **Lien du Portfolio :** [Vexyuu.github.io](https://Vexyuu.github.io)
+🔗 **Lien du Portfolio :** [Vexyuu.github.io](https://Vexyuu.github.io/Portfolio)
 
 Ce portfolio regroupe plusieurs projets interactifs et dynamiques, reflétant mes capacités en développement web, mes connaissances en sécurité informatique et mon souci du détail en UI/UX.
 

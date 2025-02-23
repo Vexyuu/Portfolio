@@ -443,7 +443,7 @@ table {
 /*-------------------------Style Projets.html-------------------------*/
 
 /* Section projets */
-#section-projets, #section-contact {
+#section-projets, #section-contact, #section-certification {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -451,7 +451,7 @@ table {
   padding: 10vh 5vw;
 }
 
-#projets-title-1, #contact-title-1 {
+#projets-title-1, #contact-title-1, #certification-title-1 {
   font-size: 3rem;
   font-style: italic;
   color: white;
@@ -542,6 +542,11 @@ table {
   background-color: var(--hover-color);
 }
 
+.description-projet a:hover {
+  background-color: #444;
+  cursor:not-allowed;
+}
+
 /* Images */
 .projet-image {
   flex: 1;
@@ -611,6 +616,9 @@ table {
 .indicator.active {
   background-color: white;
 }
+
+/*-------------------------certification.html-------------------------*/
+
 
 /*-------------------------contact.html-------------------------*/
 /* 
