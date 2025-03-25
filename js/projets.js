@@ -3,9 +3,9 @@ const projetsImages = {
         // "../image/projets/orderbyyou-1.jpg",
         // "../image/projets/orderbyyou-2.jpg",
         // "../image/projets/orderbyyou-3.jpg"
-        "../image/projets/no-image.jpg",
-        "../image/projets/no-image2.png",
-        "../image/projets/no-image.jpg"
+        "../image/projets/OrderByYou_1.jpg",
+        "../image/projets/OrderByYou_2.jpg",
+        "../image/projets/OrderByYou_3.jpg"
     ],
     2: [
         // "../image/projets/passwordgen-1.jpg",

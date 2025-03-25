@@ -9,6 +9,7 @@
     <script src="https://kit.fontawesome.com/feb76b5a58.js" crossorigin="anonymous"></script>
     <script defer src="../js/script.js"></script>
     <script defer src="../js/projets.js"></script>
+    <script defer src="../js/imageController.js"></script>
     <title>Portfolio - Killian Fievet</title>
 </head>
 
@@ -16,21 +17,27 @@
     <header>
         <nav class="navigation">
             <div class="title">Killian Fievet</div>
-            <div class="menu">
-                <a href="../index.html">A propos</a>
-                <a href="./parcours.html">Parcours</a>
-                <a href="#projets" style="color: #919ee9;">Projets</a>
-                <a href="./veilleTechno.html">Veille technologique</a>
-                <a href="./certifications.html">Certifications</a>
-                <a href="./contact.html">Contact</a>
-                <a href="../EN/indexEN.html">EN</a> <!--A changer "./projetsEN.html"-->
-            </div>
+            <ul class="menu">
+                <li><a href="../index.html">A propos</a></li>
+                <li><a href="./parcours.html">Parcours</a></li>
+                <li class="dropdown">
+                    <span id="projectsMenu" style="color: #919ee9;">Projets ▼</span>
+                    <ul class="subMenu">
+                        <li><a href="#projets" style="color: #919ee9;">Personnels</a></li>
+                        <li><a href="./projetsAcademiques.html">Académiques</a></li>
+                    </ul>
+                </li>
+                <li><a href="./veilleTechno.html">Veille technologique</a></li>
+                <li><a href="./certifications.html">Certifications</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+                <li><a href="../EN/indexEN.html">EN</a></li> <!--A changer "./projetsPersonnelsEN.html"-->
+            </ul>
         </nav>
     </header>
     <main>
         <div id="projets"></div>
         <section id="section-projets">
-            <h1 id="projets-title-1">Projets 💻</h1>
+            <h1 id="projets-title-1">Personnels 💻</h1>
 
             <p id="description-generale">
                 Voici une sélection de mes projets réalisés dans le cadre de mes études et en autonomie.
@@ -66,7 +73,8 @@
                     </div>
                     <div class=" projet-image carousel" data-project="1">
                         <button class="prev">&lt;</button>
-                        <img src="../image/projets/no-image.jpg" class="carousel-image" title="Image test">
+                        <img src="../image/projets/no-image.jpg" class="carousel-image" title="Image test"
+                            onclick="openImageModal(this.src)">
                         <button class="next">&gt;</button>
                         <div class="carousel-indicators"></div>
                     </div>
@@ -107,8 +115,8 @@
                 <!-- Projet 3 -->
                 <div class="projet projet-left">
                     <div class="description-projet">
-                        <h2>Projet 3</h2>
-                        <h3>OrdiCare</h3>
+                        <h2>Projet 3 <i>(en cours)</i></h2>
+                        <h3>Assistant IA</h3>
                         <h4>📌 description</h4>
                         <p>BLABLABLA</p>
                         <h4>🛠️ Technologies utilisées</h4>

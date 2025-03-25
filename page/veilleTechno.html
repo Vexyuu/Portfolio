@@ -16,15 +16,21 @@
     <header>
         <nav class="navigation">
             <div class="title">Killian Fievet</div>
-            <div class="menu">
-                <a href="../index.html">A propos</a>
-                <a href="./parcours.html">Parcours</a>
-                <a href="./projets.html">Projets</a>
-                <a href="#veille" style="color: #919ee9;">Veille technologique</a>
-                <a href="./certifications.html">Certifications</a>
-                <a href="./contact.html">Contact</a>
-                <a href="../EN/indexEN.html">EN</a> <!--A changer "./VeilleTechnoEN.html"-->
-            </div>
+            <ul class="menu">
+                <li><a href="../index.html">A propos</a></li>
+                <li><a href="./parcours.html">Parcours</a></li>
+                <li class="dropdown">
+                    <span id="projectsMenu">Projets ▼</span>
+                    <ul class="subMenu">
+                        <li><a href="./projetsPersonnels.html">Personnels</a></li>
+                        <li><a href="./projetsAcademiques.html">Académiques</a></li>
+                    </ul>
+                </li>
+                <li><a href="#veille" style="color: #919ee9;">Veille technologique</a></li>
+                <li><a href="./certifications.html">Certifications</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+                <li><a href="../EN/indexEN.html">EN</a></li>
+            </ul>
         </nav>
     </header>
     <main>

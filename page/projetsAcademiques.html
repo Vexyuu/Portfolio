@@ -9,6 +9,7 @@
     <script src="https://kit.fontawesome.com/feb76b5a58.js" crossorigin="anonymous"></script>
     <script defer src="../js/script.js"></script>
     <script defer src="../js/projets.js"></script>
+    <script defer src="../js/imageController.js"></script>
     <title>Portfolio - Killian Fievet</title>
 </head>
 
@@ -16,24 +17,30 @@
     <header>
         <nav class="navigation">
             <div class="title">Killian Fievet</div>
-            <div class="menu">
-                <a href="../index.html">A propos</a>
-                <a href="./parcours.html">Parcours</a>
-                <a href="#projets" style="color: #919ee9;">Projets</a>
-                <a href="./veilleTechno.html">Veille technologique</a>
-                <a href="./certifications.html">Certifications</a>
-                <a href="./contact.html">Contact</a>
-                <a href="../EN/indexEN.html">EN</a> <!--A changer "./projetsEN.html"-->
-            </div>
+            <ul class="menu">
+                <li><a href="../index.html">A propos</a></li>
+                <li><a href="./parcours.html">Parcours</a></li>
+                <li class="dropdown">
+                    <span id="projectsMenu" style="color: #919ee9;">Projets ▼</span>
+                    <ul class="subMenu">
+                        <li><a href="./projetsPersonnels.html">Personnels</a></li>
+                        <li><a href="#projets" style="color: #919ee9;">Académiques</a></li>
+                    </ul>
+                </li>
+                <li><a href="./veilleTechno.html">Veille technologique</a></li>
+                <li><a href="./certifications.html">Certifications</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+                <li><a href="../EN/indexEN.html">EN</a></li> <!--A changer "./projetsAcademiquesEN.html"-->
+            </ul>
         </nav>
     </header>
     <main>
         <div id="projets"></div>
         <section id="section-projets">
-            <h1 id="projets-title-1">Projets 💻</h1>
+            <h1 id="projets-title-1">Académiques 💻</h1>
 
             <p id="description-generale">
-                Voici une sélection de mes projets réalisés dans le cadre de mes études et en autonomie.
+                Voici une sélection de mes projets réalisés dans le cadre de mes études.
                 Chaque projet illustre mes compétences en développement web et ma progression dans divers domaines.
             </p>
 
@@ -44,10 +51,16 @@
                         <h2><i class="fas fa-code"></i> Projet 1</h2>
                         <h3><i class="fas fa-globe"></i> OrderByYou</h3>
                         <h4>📌 description</h4>
-                        <p>OrderByYou est une plateforme interactive qui permet aux utilisateurs de parcourir et filtrer
-                            des produits en fonction de leurs préférences.
-                            Le projet repose sur une interface dynamique qui affiche des marques et leurs produits
-                            associés.</p>
+                        <p>OrderByYou est une plateforme interactive permettant aux utilisateurs de parcourir et filtrer
+                            des
+                            produits en fonction de leurs préférences. L'interface dynamique affiche les marques et
+                            leurs
+                            produits associés. </br></br>Les utilisateurs peuvent ajouter des articles à leur panier et
+                            valider
+                            leurs
+                            commandes, avec la possibilité de consulter l'historique des achats dans leur profil. Un
+                            tableau de
+                            bord est également disponible pour les administrateurs afin de gérer la plateforme.</p>
                         <h4>🛠️ Technologies utilisées</h4>
                         <ul>
                             <li><b>HTML, CSS, JavaScript :</b> Structure et style du site.</li>
@@ -66,7 +79,8 @@
                     </div>
                     <div class=" projet-image carousel" data-project="1">
                         <button class="prev">&lt;</button>
-                        <img src="../image/projets/no-image.jpg" class="carousel-image" title="Image test">
+                        <img src="../image/projets/OrderByYou_1.jpg" class="carousel-image" title="Image test"
+                            onclick="openImageModal(this.src)">
                         <button class="next">&gt;</button>
                         <div class="carousel-indicators"></div>
                     </div>
@@ -76,28 +90,39 @@
                 <div class="projet projet-right">
                     <div class="projet-image carousel" data-project="2">
                         <button class="prev">&lt;</button>
-                        <img src="../image/projets/no-image.jpg" class="carousel-image" title="Image test">
+                        <img src="../image/projets/no-image.jpg" class="carousel-image" title="Image test"
+                            onclick="openImageModal(this.src)">
                         <button class="next">&gt;</button>
                         <div class="carousel-indicators"></div>
                     </div>
                     <div class="description-projet">
                         <h2><i class="fas fa-key"></i> Projet 2</h2>
-                        <h3><i class="fas fa-lock"></i> Password Generator</h3>
+                        <h3>💻 OrdiCare</h3>
                         <h4>📌 description</h4>
-                        <p>Password Generator est un outil permettant de générer des mots de passe sécurisés en fonction
-                            des préférences de l'utilisateur (longueur, présence de caractères spéciaux, chiffres,
-                            majuscules/minuscules).</p>
+                        <br>OrdiCare est un logiciel Windows de gestion de parc informatique, conçu pour faciliter la
+                        gestion des équipements informatiques et le suivi des interventions des techniciens
+                        internes. Il permet également de créer et de gérer des interventions, en associant chaque
+                        intervention à un client, un technicien, et un produit spécifique. </br></br>L'application offre
+                        une
+                        interface simple et intuitive, permettant d'optimiser la productivité des équipes techniques
+                        tout en garantissant une prise en main rapide et efficace.</p>
+
                         <h4>🛠️ Technologies utilisées</h4>
                         <ul>
-                            <li><b>HTML, CSS, JavaScript :</b> Interface simple et intuitive.</li>
-                            <li><b>JavaScript (Math.random) :</b> Génération aléatoire des caractères.</li>
-                            <li><b>Clipboard API :</b> Permet de copier directement le mot de passe généré.</li>
+                            <li><b>C# avec .NET Framework :</b> Développement de l'application Windows robuste et
+                                performante.</li>
+                            <li><b>Visual Studio 2022 :</b> Environnement de développement intégré (IDE) utilisé pour
+                                concevoir et déployer l'application.</li>
+                            <li><b>SQL Server (SSMS) :</b> Gestion des bases de données, avec des tables pour les
+                                clients, interventions, techniciens, marques et produits.</li>
                         </ul>
+
                         <h4>🎯 Objectifs</h4>
                         <ul>
-                            <li>Offrir un moyen rapide et sécurisé de générer des mots de passe robustes.</li>
-                            <li>Permettre à l’utilisateur de personnaliser ses préférences.</li>
-                            <li>Assurer une interface ergonomique et responsive.</li>
+                            <li>Faciliter la gestion des équipements informatiques au sein d'une organisation.</li>
+                            <li>Permettre un suivi précis et efficace des interventions des techniciens internes, en
+                                associant chaque intervention à un client et un produit spécifique.</li>
+                            <li>Offrir une interface utilisateur simple, intuitive et entièrement fonctionnelle.</li>
                         </ul>
                         <!-- <a href="https://Vexyuu.github.io/PasswordGenerator" target="_blank">🔗 Lien vers le projet</a> -->
                         <a href="">🔗 Lien vers le projet</a>
@@ -105,7 +130,7 @@
                 </div>
 
                 <!-- Projet 3 -->
-                <div class="projet projet-left">
+                <!-- <div class="projet projet-left">
                     <div class="description-projet">
                         <h2>Projet 3</h2>
                         <h3>OrdiCare</h3>
@@ -129,16 +154,17 @@
                                 in eius moliebatur exitium addens quaedam relationibus supervacua, quas subinde
                                 dimittebat ad principem.</li>
                         </ul>
-                        <!-- <a href="https://Vexyuu.github.io/OrdiCare" target="_blank">🔗 Lien vers le projet</a> -->
-                        <a href="">🔗 Lien vers le projet</a>
-                    </div>
-                    <div class="projet-image carousel" data-project="3">
-                        <button class="prev">&lt;</button>
-                        <img src="../image/projets/no-image.jpg" class="carousel-image" title="Image test">
-                        <button class="next">&gt;</button>
-                        <div class="carousel-indicators"></div>
-                    </div>
-                </div>
+                        <a href="https://Vexyuu.github.io/OrdiCare" target="_blank">🔗 Lien vers le projet</a>
+                <a href="">🔗 Lien vers le projet</a>
+            </div>
+            <div class="projet-image carousel" data-project="3">
+                <button class="prev">&lt;</button>
+                <img src="../image/projets/no-image.jpg" class="carousel-image" title="Image test"
+                    onclick="openImageModal(this.src)">
+                <button class="next">&gt;</button>
+                <div class="carousel-indicators"></div>
+            </div>
+            </div> -->
             </div>
         </section>
     </main>
