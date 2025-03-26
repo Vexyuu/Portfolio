@@ -1,8 +1,5 @@
 const projetsImages = {
     1: [
-        // "../image/projets/orderbyyou-1.jpg",
-        // "../image/projets/orderbyyou-2.jpg",
-        // "../image/projets/orderbyyou-3.jpg"
         "../image/projets/OrderByYou_1.jpg",
         "../image/projets/OrderByYou_2.jpg",
         "../image/projets/OrderByYou_3.jpg"
@@ -13,14 +10,6 @@ const projetsImages = {
         // "../image/projets/passwordgen-3.jpg"
         "../image/projets/no-image.jpg",
         "../image/projets/no-image2.png",
-        "../image/projets/no-image.jpg"
-    ],
-    3: [
-        // "../image/projets/ordicare-1.jpg",
-        // "../image/projets/ordicare-2.jpg",
-        // "../image/projets/ordicare-3.jpg"
-        "../image/projets/no-image.jpg",
-        "../image/projets/no-imag2.png",
         "../image/projets/no-image.jpg"
     ]
 };
@@ -70,4 +59,11 @@ document.querySelectorAll(".carousel").forEach(carousel => {
     indicators.forEach((dot, index) => {
         dot.addEventListener("click", () => updateCarousel(index));
     });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    const nbProjects = document.querySelector("#projet-numbers");
+    arrayProjetsImages = Object.keys(projetsImages);
+    console.log(arrayProjetsImages);
+    nbProjects.innerHTML = arrayProjetsImages.length;
 });

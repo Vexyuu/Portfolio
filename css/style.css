@@ -542,6 +542,12 @@ table {
   max-width: 1400px;
 }
 
+#projet-numbers {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
 /* Projets */
 .projet {
   display: flex;
@@ -567,6 +573,8 @@ table {
 .projet-right {
   flex-direction: row-reverse;
 }
+
+.projet
 
 /* Description */
 .description-projet {
@@ -612,10 +620,10 @@ table {
   background-color: var(--hover-color);
 }
 
-.description-projet a:hover {
+/* .description-projet a:hover {
   background-color: #444;
   cursor:not-allowed;
-}
+} */
 
 /* Images */
 .projet-image {
@@ -709,7 +717,55 @@ table {
 }
 
 /*-------------------------certification.html-------------------------*/
+.certifications-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
 
+.certification-card {
+  width: 300px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 15px;
+}
+
+.certification-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.certification-card h3 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.certification-card h4 {
+  font-size: 14px;
+  color: #666;
+}
+
+.certification-card p {
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.certification-card a {
+  display: inline-block;
+  padding: 8px 12px;
+  background: var(--primary-color);
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.certification-card a:hover {
+  background: #45a049;
+}
 
 /*-------------------------contact.html-------------------------*/
 /* 

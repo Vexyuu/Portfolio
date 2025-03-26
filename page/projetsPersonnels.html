@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/feb76b5a58.js" crossorigin="anonymous"></script>
     <script defer src="../js/script.js"></script>
-    <script defer src="../js/projets.js"></script>
+    <script defer src="../js/projetsPerso.js"></script>
     <script defer src="../js/imageController.js"></script>
     <title>Portfolio - Killian Fievet</title>
 </head>
@@ -37,10 +37,11 @@
     <main>
         <div id="projets"></div>
         <section id="section-projets">
-            <h1 id="projets-title-1">Personnels 💻</h1>
+            <h1 id="projets-title-1">Projets<br>Personnels 💻</h1>
 
             <p id="description-generale">
-                Voici une sélection de mes projets réalisés dans le cadre de mes études et en autonomie.
+                Voici une sélection de mes <span id="projet-numbers"></span> projets réalisés
+                en autonomie.
                 Chaque projet illustre mes compétences en développement web et ma progression dans divers domaines.
             </p>
 
@@ -49,9 +50,9 @@
                 <div class="projet projet-left">
                     <div class="description-projet">
                         <h2><i class="fas fa-code"></i> Projet 1</h2>
-                        <h3><i class="fas fa-globe"></i> OrderByYou</h3>
+                        <h3><i class="fas fa-globe"></i> ShopWise</h3>
                         <h4>📌 description</h4>
-                        <p>OrderByYou est une plateforme interactive qui permet aux utilisateurs de parcourir et filtrer
+                        <p>ShopWise est une plateforme interactive qui permet aux utilisateurs de parcourir et filtrer
                             des produits en fonction de leurs préférences.
                             Le projet repose sur une interface dynamique qui affiche des marques et leurs produits
                             associés.</p>
@@ -68,7 +69,7 @@
                             <li>Mettre en place un système de filtrage efficace.</li>
                             <li>Améliorer l'interaction avec des animations et une navigation intuitive.</li>
                         </ul>
-                        <!-- <a href="https://Vexyuu.github.io/OrderByYou" target="_blank">🔗 Lien vers le projet</a> -->
+                        <!-- <a href="https://Vexyuu.github.io/ShopWise" target="_blank">🔗 Lien vers le projet</a> -->
                         <a href="">🔗 Lien vers le projet</a>
                     </div>
                     <div class=" projet-image carousel" data-project="1">
@@ -145,6 +146,38 @@
                         <img src="../image/projets/no-image.jpg" class="carousel-image" title="Image test">
                         <button class="next">&gt;</button>
                         <div class="carousel-indicators"></div>
+                    </div>
+                </div>
+
+                <!-- Projet 4 -->
+                <div class="projet projet-right">
+                    <div class="projet-image carousel" data-project="4">
+                        <button class="prev">&lt;</button>
+                        <img src="../image/projets/no-image.jpg" class="carousel-image" title="Image test">
+                        <button class="next">&gt;</button>
+                        <div class="carousel-indicators"></div>
+                    </div>
+                    <div class="description-projet">
+                        <h2><i class="fas fa-key"></i> Projet 3 <i>(en cours)</i></h2>
+                        <h3><i class="fas fa-lock"></i> CookMe</h3>
+                        <h4>📌 description</h4>
+                        <p>Password Generator est un outil permettant de générer des mots de passe sécurisés en fonction
+                            des préférences de l'utilisateur (longueur, présence de caractères spéciaux, chiffres,
+                            majuscules/minuscules).</p>
+                        <h4>🛠️ Technologies utilisées</h4>
+                        <ul>
+                            <li><b>HTML, CSS, JavaScript :</b> Interface simple et intuitive.</li>
+                            <li><b>JavaScript (Math.random) :</b> Génération aléatoire des caractères.</li>
+                            <li><b>Clipboard API :</b> Permet de copier directement le mot de passe généré.</li>
+                        </ul>
+                        <h4>🎯 Objectifs</h4>
+                        <ul>
+                            <li>Offrir un moyen rapide et sécurisé de générer des mots de passe robustes.</li>
+                            <li>Permettre à l’utilisateur de personnaliser ses préférences.</li>
+                            <li>Assurer une interface ergonomique et responsive.</li>
+                        </ul>
+                        <!-- <a href="https://Vexyuu.github.io/PasswordGenerator" target="_blank">🔗 Lien vers le projet</a> -->
+                        <a href="">🔗 Lien vers le projet</a>
                     </div>
                 </div>
             </div>
