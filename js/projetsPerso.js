@@ -82,7 +82,7 @@ document.querySelectorAll(".carousel").forEach(carousel => {
 
 document.addEventListener("DOMContentLoaded", function() {
     const nbProjects = document.querySelector("#projet-numbers");
-    arrayProjetsImages = Object.keys(projetsImages);
+    const arrayProjetsImages = Object.keys(projetsImages);
     console.log(arrayProjetsImages);
     nbProjects.innerHTML = arrayProjetsImages.length;
 });

@@ -51,3 +51,10 @@ document.addEventListener("DOMContentLoaded", function() {
         container.appendChild(elementDiv);
     })
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const nbCertification = document.querySelector("#certification-numbers");
+    const arrayCertifications = Object.keys(certifications);
+    console.log(arrayCertifications);
+    nbCertification.innerHTML = arrayCertifications.length;
+});

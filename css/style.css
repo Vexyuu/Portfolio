@@ -505,7 +505,7 @@ table {
 /*-------------------------Style Projets.html-------------------------*/
 
 /* Section projets */
-#section-projets, #section-contact, #section-certification {
+#section-projets, #section-contact, #section-certification, #section-veille {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -513,7 +513,7 @@ table {
   padding: 10vh 5vw;
 }
 
-#projets-title-1, #contact-title-1, #certification-title-1 {
+#projets-title-1, #contact-title-1, #certification-title-1, #veille-title-1 {
   font-size: 3rem;
   font-style: italic;
   color: white;
@@ -542,7 +542,7 @@ table {
   max-width: 1400px;
 }
 
-#projet-numbers {
+#projet-numbers, #certification-numbers, #veille-numbers {
   color: var(--primary-color);
   font-size: 1.5rem;
   font-weight: bold;
@@ -716,8 +716,19 @@ table {
   background-color: white;
 }
 
+/*-------------------------veille.html-------------------------*/
+.veille-card {
+  width: 600px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 15px;
+}
+
+
 /*-------------------------certification.html-------------------------*/
-.certifications-container {
+.certifications-container, .veille-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -733,13 +744,13 @@ table {
   padding: 15px;
 }
 
-.certification-card img {
+.certification-card img, .veille-card img {
   width: 100px;
   height: 100px;
   object-fit: contain;
 }
 
-.certification-card h3 {
+.certification-card h3, .veille-card h3 {
   font-size: 18px;
   margin: 10px 0;
 }
@@ -749,12 +760,12 @@ table {
   color: #666;
 }
 
-.certification-card p {
+.certification-card p, .veille-card p {
   font-size: 14px;
   margin: 10px 0;
 }
 
-.certification-card a {
+.certification-card a, .veille-card a {
   display: inline-block;
   padding: 8px 12px;
   background: var(--primary-color);
@@ -763,45 +774,79 @@ table {
   text-decoration: none;
 }
 
-.certification-card a:hover {
-  background: #45a049;
+.certification-card a:hover, .veille-card a:hover {
+  background: var(--hover-color);
 }
 
 /*-------------------------contact.html-------------------------*/
-/* 
-.contact-box {
-  gap: 50px;
-  width: 60%;
-  max-width: 1200px;
-}
-
-.contact-form {
-  align-items: center;
-  justify-content: space-between;
-  background-color: rgba(255, 255, 255, 0.1);
+.container-contact {
+  margin-top: 20px;
+  color: white;
+  width: 100%;
+  max-width: 600px;
   padding: 30px;
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 15px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  backdrop-filter: blur(10px);
 }
 
-.contact-form:hover {
-  transform: scale(1.02);
-  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+.container-contact h2 {
+  margin: 0 0 10px;
+  font-weight: 600;
+  font-size: 2rem;
 }
 
-.form-name, .form-email, .form-tel, .form-comment {
+.container-contact p {
+  font-size: 1.1rem;
+  color: #e0e0e0;
+  margin-bottom: 10px;
+}
+
+.container-contact label {
+  display: block;
+  margin: 5px 0;
+  text-align: left;
+}
+
+.container-contact input,
+.container-contact textarea {
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
   padding: 10px;
-  display: flex;
-  flex-direction: column;
+  margin: 5px 0;
+  border: none;
+  border-radius: 5px;
 }
 
-.form-name input, .form-email input, .form-tel input, .form-comment input {
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-} */
+.container-contact textarea {
+  max-width: 100%;
+  min-height: 150px;
+}
 
+.container-contact input:focus,
+.container-contact textarea:focus {
+  outline: none;
+  border-color: #6f82e6;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.container-contact button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  background-color: #919ee9;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.container-contact button:hover {
+  background-color: #6f82e6;
+}
 
 /*-------------------------Responsive design-------------------------*/
 @media (max-width: 768px) {
@@ -871,5 +916,46 @@ table {
 
   .projet-image img {
     width: 80%;
+  }
+
+  .container-contact {
+    max-width: 100%;
+    padding: 20px;
+  }
+
+  .container-contact h2 {
+      font-size: 1.8rem;
+  }
+
+  .container-contact p {
+      font-size: 1rem;
+  }
+
+  .container-contact .reseaux a {
+      font-size: 1rem;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .container-contact h2 {
+      font-size: 1.5rem;
+  }
+
+  .container-contact p {
+      font-size: 0.9rem;
+  }
+
+  .container-contact {
+      padding: 15px;
+  }
+
+  .container-contact button {
+      padding: 10px;
+      font-size: 0.9rem;
+  }
+
+  .container-contact .reseaux a {
+      font-size: 0.9rem;
   }
 }

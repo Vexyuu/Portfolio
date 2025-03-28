@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // Récupère l'ID de l'ancre depuis l'attribut href
       const targetId = this.getAttribute("href").substring(1);
 
-      if (targetId === "about") {
+      if (targetId === "about" || targetId === "parcours" || targetId === "projets" || targetId === "contact" || targetId === "veille") {
         // Défilement doux vers le haut de la page
         window.scrollTo({
           top: 0,
@@ -47,7 +47,7 @@ const menuIcon = document.querySelector('.menu-icon');
 const menu = document.querySelector('.menu');
 const navigation = document.querySelector('.navigation');
 
-menuIcon.addEventListener('click', () => {
-  navigation.classList.toggle('open');
-  menu.classList.toggle('open');
-});
+// menuIcon.addEventListener('click', () => {
+//   navigation.classList.toggle('open');
+//   menu.classList.toggle('open');
+// });
