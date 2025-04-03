@@ -1,5 +1,21 @@
 const certifications = [
     {
+        titre: "Certification SoloLearn - SQL Intermediate",
+        organisme: "SoloLearn",
+        description: "Certificat attestant de mes compétences en SQL avancé.",
+        image: "../image/certifications/SQL_Intermediate_SoloLearn.jpg",
+        lien: "https://www.sololearn.com/fr/certificates/CC-NVAPAKO8",
+        date: "2025-04-03"
+    },
+    {
+        titre: "Certification SoloLearn - JavaScript Intermediate",
+        organisme: "SoloLearn",
+        description: "Certificat attestant de mes compétences en JavaScript avancé.",
+        image: "../image/certifications/JavaScript_Intermediate_SoloLearn.jpg",
+        lien: "https://www.sololearn.com/certificates/CC-WF8ABFCD",
+        date: "2025-03-29"
+    },
+    {
         titre: "Certification SoloLearn - Développeur Python",
         organisme: "SoloLearn",
         description: "Certificat attestant de mes compétences en Python.",
@@ -21,7 +37,7 @@ const certifications = [
         description: "Certificat attestant de mes compétences en cybersécurité.",
         image: "../image/certifications/Intro_to_Cybersecurity_Cisco.jpg",
         lien: "https://www.credly.com/badges/e233362e-1a7c-45be-944c-ac3fe8974528/linked_in_profile",
-        date: "2024-12-10"
+        date: "2024-12-09"
     },
     {
         titre: "Certification Ratatype - Dactylographie",

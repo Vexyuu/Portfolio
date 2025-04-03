@@ -20,6 +20,7 @@ body {
   font-family: var(--font-main);
   margin: 0;
   padding: 0;
+  /* background-color: #121212; */
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url(../image/background.jpg);
   background-size: cover;
@@ -731,7 +732,7 @@ table {
 .certifications-container, .veille-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  /* justify-content: center; */
   gap: 20px;
 }
 
@@ -935,7 +936,6 @@ table {
       font-size: 1rem;
   }
 }
-
 
 @media (max-width: 480px) {
   .container-contact h2 {
