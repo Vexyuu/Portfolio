@@ -20,9 +20,9 @@ body {
   font-family: var(--font-main);
   margin: 0;
   padding: 0;
-  /* background-color: #121212; */
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url(../image/background.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6)),
+    url(../image/background-1.jpg);
+  /* url(../image/background.jpg); */
   background-size: cover;
   background-attachment: fixed;
 }
@@ -124,6 +124,20 @@ body {
   display: block;
 }
 
+.burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.burger span {
+  background: #fff;
+  height: 3px;
+  width: 25px;
+  margin: 4px;
+  display: block;
+}
+
 .container {
   margin: 220px 10px;
   display: grid;
@@ -155,48 +169,12 @@ body {
 #paragrapheStart {
   margin-top: 50px;
 }
-/* 
-#CV {
-  width: max-content;
-  background-color: white;
-  margin-top: 40px;
-  text-align: center;
-  padding: 7px;
-  border-radius: 30px;
-  box-shadow: 0 0 15px #919ee9;
-} */
-
-/* #CV a {
-  color: black;
-  font-size: 25px;
-  padding: 7px 20px;
-  border-radius: 30px;
-  /* transition: transform 0.3s ease-in-out;
-}
-
-#CV:hover {
-  box-shadow: 0 0 15px rgba(145, 158, 233, 0.7);
-  cursor: pointer;
-  /* transform: scale(1.05);
-}
-
-
-#CV a:hover {
-  color:rgba(52, 64, 129, 0.7);
-  cursor: pointer;
-} */
-
-/* .box {
-  background-color: white;
-  width: max-content;
-  height: max-content;
-  margin: auto;
-  padding: 40px;
-  border-radius: 30px;
-  box-shadow: 0 0 30px rgba(145, 158, 233, 0.5);
-} */
 
 .box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background-color: rgba(255, 255, 255, 0.1);
   width: max-content;
   height: max-content;
@@ -336,9 +314,9 @@ table {
 .competences-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 40px;
+  gap: 30px;
   justify-content: center;
-  padding: 20px;
+  /* padding: 20px; */
 }
 
 .competences-list li {
@@ -346,7 +324,7 @@ table {
   text-align: center;
   background: rgba(255, 255, 255, 0.1);
   padding: 10px;
-  border-radius: 20px;
+  border-radius: 15px;
   transition: transform 0.3s ease-in-out;
 }
 
@@ -409,7 +387,7 @@ table {
   justify-content: center;
   gap: 30px;
   color: white;
-  width: 80%;
+  width: 90%;
   padding: 30px;
   border-radius: 12px;
   background-color: rgba(255, 255, 255, 0.1);
@@ -470,34 +448,44 @@ table {
 }
 
 .timeline-item {
-  /* display: flex;
-  align-items: flex-start; */
+  display: flex;
+  align-items: center;
   margin-bottom: 20px;
   position: relative;
 }
 
 
 .circle {
+  flex-shrink: 0;
   width: 14px;
   height: 14px;
-  border: 3px solid #919ee9;
+  background-color: white;
   border-radius: 50%;
+  border: 3px solid #919ee9;
   position: absolute;
   left: -20px;
-  top: 5px;
-  background-color: white;
+  top: 15%;
 }
 
 .content {
-  padding-left: 20px;
+  padding-left: 30px;
   border-radius: 8px;
 }
 
+.content-1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* Écarte le contenu et la date */
+  width: 100%;
+}
+
 .date {
-  background: #bdbdbd;
-  padding: 6px 12px;
+  position: absolute;
+  right: 0;
+  background-color: #4c5c96;
+  padding: 5px 10px;
   border-radius: 5px;
-  font-size: 0.9rem;
+  font-size: 14px;
   color: white;
   display: inline-block;
   margin: 10px 0;
@@ -857,26 +845,28 @@ table {
     align-items: center;
   }
   .menu {
-    /* flex-direction: column;
-    gap: 10px;
-    margin-top: 20px; */
     display: none;
     flex-direction: column;
-    gap: 10px;
+    position: absolute;
+    background: #333;
     width: 100%;
-    text-align: center;
+    top: 60px;
+    left: 0;
   }
-
+  .menu.active {
+      display: flex;
+  }
+  .burger {
+    display: flex;
+  }
   .menu a {
     padding: 10px;
     width: 100%;
     text-align: center;
   }
-
   .container {
     grid-template-columns: 1fr;
   }
-
   .infoBox h1 {
     font-size: 40px;
   }
@@ -908,6 +898,10 @@ table {
   #parcours-box {
     flex-direction: column;
     align-items: center;
+  }
+
+  .parcours-column {
+    width: 90%;
   }
 
   .projet {
@@ -958,4 +952,21 @@ table {
   .container-contact .reseaux a {
       font-size: 0.9rem;
   }
+}
+
+
+/* -------------------------KeyFrames------------------------- */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+main {
+  animation: fadeIn 0.4s ease-in-out;
 }

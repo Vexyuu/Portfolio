@@ -43,11 +43,6 @@ window.addEventListener("scroll", function() {
 })
 
 // Barre de navigation responsive
-const menuIcon = document.querySelector('.menu-icon');
-const menu = document.querySelector('.menu');
-const navigation = document.querySelector('.navigation');
-
-// menuIcon.addEventListener('click', () => {
-//   navigation.classList.toggle('open');
-//   menu.classList.toggle('open');
-// });
+document.querySelector('.burger').addEventListener('click', function() {
+  document.querySelector('.menu').classList.toggle('active');
+});
