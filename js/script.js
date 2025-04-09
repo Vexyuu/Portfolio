@@ -46,3 +46,10 @@ window.addEventListener("scroll", function() {
 document.querySelector('.burger').addEventListener('click', function() {
   document.querySelector('.menu').classList.toggle('active');
 });
+
+// Cartes des spécialités Spécialité SLAM & SISR
+function toggleCard(card) {
+    card.classList.toggle('open');
+    const icon = card.querySelector(".toggle-icon");
+    icon.textContent = card.classList.contains("open") ? "+" : "+";
+}

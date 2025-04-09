@@ -69,6 +69,8 @@
                                 class="fa-brands fa-linkedin fa-xl" style="color: #4984e9;"></i> LinkedIn</a>
                         <a href="https://github.com/Vexyuu?tab=repositories" target="_blank"><i
                                 class="fa-brands fa-github fa-xl" style="color: #000000;"></i> GitHub</a>
+                        <!-- <a href="https://x.com" target="_blank"><i class="fa-brands fa-square-x-twitter fa-xl"
+                                style="color: #000000;"></i> Twitter</a> -->
                     </div>
                 </div>
             </div>
@@ -77,50 +79,95 @@
         <!--Section 2-->
         <section>
             <div class="container2">
-                <h1 class="BTS-title">Qu'est-ce que le BTS SIO ? 🎓</h1>
-                <p class="BTS-content">Le <strong>BTS Services Informatiques aux Organisations (SIO)</strong> est un
-                    diplôme de niveau Bac+2. Il prépare aux métiers de l'informatique et
-                    offre deux spécialisations : <strong>SLAM</strong> (Solutions Logicielles et Applications
-                    Métier) et <strong>SISR</strong> (Solutions d'Infrastructure, Systèmes et Réseaux).</p>
+                <div class="BTS-box">
+                    <i class="i-popup" onclick="modalPopup()">i</i>
 
-                <!-- SLAM Card -->
-                <div class="card" onclick="toggleCard(this)">
-                    <div class="card-header">
-                        <h2 class="card-title">Spécialité SLAM 💻</h2>
-                        <span class="toggle-icon">+</span>
-                    </div>
-                    <p class="card-summary">Développement d'applications web, mobile et logiciels métiers.</p>
-                    <div class="card-content">
-                        <p><strong>SLAM</strong> se concentre sur le développement d'applications performantes et
-                            sécurisées.</p>
-                        <ul>
-                            <li><strong>Développement Web :</strong> HTML, CSS, JS, PHP, React...</li>
-                            <li><strong>Développement Mobile :</strong> React Native, Flutter, Kotlin...</li>
-                            <li><strong>Gestion de projet :</strong> Scrum, GitHub, Trello</li>
-                            <li><strong>Sécurité :</strong> XSS, injections SQL, tests automatisés</li>
-                        </ul><br>
-                        <em>Débouchés : développeur web, mobile, ingénieur logiciel, chef de projet.</em>
-                    </div>
-                </div>
+                    <h1 class="BTS-title">Qu'est-ce que le BTS SIO ? 🎓</h1>
+                    <p class="BTS-content">Le <strong>BTS Services Informatiques aux Organisations (SIO)</strong> est un
+                        diplôme de niveau Bac+2. Il prépare aux métiers de l'informatique et
+                        offre deux spécialisations : <strong>SLAM</strong> (Solutions Logicielles et Applications
+                        Métier) et <strong>SISR</strong> (Solutions d'Infrastructure, Systèmes et Réseaux).</p>
 
-                <!-- SISR Card -->
-                <div class="card" onclick="toggleCard(this)">
-                    <div class="card-header">
-                        <h2 class="card-title">Spécialité SISR 🛠️</h2>
-                        <span class="toggle-icon">+</span>
+                    <!--Spécialité SLAM-->
+                    <h2 class="BTS-title">La spécialité SLAM</h2>
+                    <p class="BTS-content">La spécialité <strong>SLAM (Solutions Logicielles et Applications
+                            Métier)</strong> est axée sur le développement de
+                        logiciels et d'applications web et mobiles. Elle permet aux étudiants d'acquérir des compétences
+                        en <strong>programmation</strong>, <strong> gestion de bases de données</strong>,
+                        <strong>gestion de projet</strong> et <strong>sécurité des applications</strong>.
+                    </p>
+                    <h3>🖥️ Les modules de la spécialité SLAM</h3>
+                    <div class="BTS-modules">
+                        <div class="BTS-module">
+                            <h3>🔹 Développement Web</h3>
+                            <p>Création de sites web dynamiques avec HTML, CSS, JavaScript, PHP et des frameworks
+                                modernes (React, Angular, Vue.js)</p>
+                            <p>Gestion des bases de données avec MySQL, PostgreSQL, MongoDB</p>
+                            <p>Développement d’API REST et intégration d’APIs tierces</p>
+                        </div>
+                        <div class="BTS-module">
+                            <h3>🔹 Développement Mobile</h3>
+                            <p>Conception d’applications mobiles pour Android et iOS</p>
+                            <p>Utilisation de React Native, Flutter, Kotlin, Swift</p>
+                            <p>Optimisation des performances et expérience utilisateur</p>
+                        </div>
+                        <div class="BTS-module">
+                            <h3>🔹 Gestion de projet et Méthodes Agiles</h3>
+                            <p>Utilisation des méthodes Scrum et Kanban</p>
+                            <p>Outils de gestion de projet comme Trello, Jira, GitHub Projects</p>
+                            <p>Collaboration en équipe et bonnes pratiques de développement</p>
+                        </div>
+                        <div class="BTS-module">
+                            <h3>🔹 Sécurité et Qualité des Applications</h3>
+                            <p>Protection des applications contre les failles de sécurité
+                                (XSS, injections SQL, CSRF)</p>
+                            <p>Tests automatisés et revue de code avec Jest, Cypress, PHPUnit</p>
+                            <p>Optimisation des performances et accessibilité des applications</p>
+                        </div>
                     </div>
-                    <p class="card-summary">Gestion des réseaux, serveurs, systèmes et sécurité informatique.</p>
-                    <div class="card-content">
-                        <p><strong>SISR</strong> forme à la mise en place et à la sécurisation d’infrastructures
-                            informatiques.</p>
-                        <ul>
-                            <li><strong>Admin Réseaux :</strong> Windows, Linux, gestion utilisateurs</li>
-                            <li><strong>Virtualisation/Cloud :</strong> VMware, Docker, AWS</li>
-                            <li><strong>Sécurité :</strong> pare-feu, VPN, détection d’intrusions</li>
-                            <li><strong>Support :</strong> scripts Bash/PowerShell, supervision</li>
-                        </ul><br>
-                        <em>Débouchés : admin réseau, technicien systèmes, ingénieur cloud/sécurité.</em>
+                    <br><i>Grâce à cette spécialisation, les étudiants peuvent devenir développeurs web, développeurs
+                        mobile, ingénieurs logiciel ou encore chefs de projet. 🚀
+                    </i><br><br>
+
+                    <!--Spécialité SISR-->
+                    <h2 class="BTS-title">La spécialité SISR</h2>
+                    <p class="BTS-content">La spécialité <strong>SISR (Solutions d'Infrastructure, Systèmes et
+                            Réseaux)</strong> est orientée vers l'administration des systèmes et réseaux informatiques.
+                        Elle forme les étudiants aux compétences nécessaires pour <strong>Déployer</strong>,
+                        <strong>sécuriser</strong>, <strong>maintenir des
+                            infrastructures réseau</strong> et <strong>des systèmes d’information en
+                            entreprise.</strong>
+                    </p>
+                    <h3>🖥️ Les modules de la spécialité SISR</h3>
+                    <div class="BTS-modules">
+                        <div class="BTS-module">
+                            <h3>🔹 Administration des systèmes et réseaux</h3>
+                            <p>Configuration et gestion des serveurs sous Windows et Linux</p>
+                            <p>Mise en place et maintenance des infrastructures réseau</p>
+                            <p>Gestion des utilisateurs et des droits d’accès</p>
+                        </div>
+                        <div class="BTS-module">
+                            <h3>🔹 Virtualisation et Cloud Computing</h3>
+                            <p>Utilisation de technologies comme VMware, Hyper-V et Docker</p>
+                            <p>Déploiement d’infrastructures cloud avec AWS, Azure ou Google Cloud</p>
+                        </div>
+                        <div class="BTS-module">
+                            <h3>🔹 Sécurité des systèmes et réseaux</h3>
+                            <p>Protection des données et cybersécurité</p>
+                            <p>Configuration des pare-feu, VPN et systèmes de détection d'intrusions</p>
+                            <p>Analyse des menaces et mise en place de solutions de sécurité</p>
+                        </div>
+                        <div class="BTS-module">
+                            <h3>🔹 Support et maintenance informatique</h3>
+                            <p>Dépannage des incidents liés aux infrastructures réseau et aux postes de travail</p>
+                            <p>Automatisation des tâches administratives avec des scripts (Bash, PowerShell)</p>
+                            <p>Supervision et gestion des performances des systèmes</p>
+                        </div>
                     </div>
+                    <br><i>Grâce à cette spécialisation, les étudiants peuvent devenir
+                        administrateurs réseau, techniciens
+                        systèmes, ingénieurs sécurité ou encore spécialistes en cloud computing et virtualisation. 🚀
+                    </i>
                 </div>
             </div>
         </section>
@@ -194,14 +241,6 @@
                         <li>
                             <img src="./image/WampServer.png" width="80px">
                             <p>Serveur local pour le développement web</p>
-                        </li>
-                        <li>
-                            <img src="./image/Virtualbox.png" width="80px">
-                            <p>Virtualisation des machines</p>
-                        </li>
-                        <li>
-                            <img src="./image/VMware.png" width="80px">
-                            <p>Virtualisation des machines</p>
                         </li>
                     </ul>
                 </div>

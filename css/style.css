@@ -20,12 +20,10 @@ body {
   font-family: var(--font-main);
   margin: 0;
   padding: 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6)),
-    url(../image/background-1.jpg);
-  /* url(../image/background.jpg); */
-  background-size: cover;
-  background-attachment: fixed;
+  /* background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6)); */
+  color: var(--text-color);
 }
+
 
 .navigation {
   position: fixed;
@@ -224,6 +222,10 @@ table {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto 150px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
   padding: 20px;
   color: var(--text-color);
   background-color: rgba(255, 255, 255, 0.1);
@@ -231,16 +233,76 @@ table {
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
 }
 
-.BTS-box {
+.container2 .card {
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  overflow: hidden;
+}
+
+.container2 .card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container2 .card-title {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.container2 .toggle-icon {
+  font-size: 2rem;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.container2 .card-summary {
+  color: var(--primary-color);
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+}
+
+.container2 .card-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  margin-top: 0.5rem;
+}
+
+.container2 .card.open .card-content {
+  max-height: 600px;
+}
+
+.container2 .card.open .toggle-icon {
+  transform: rotate(45deg);
+}
+
+.container2 .card-content p,
+.container2 .card-content ul,
+.container2 .card-content em {
+  margin: 0.5rem 0;
+}
+
+.container2 ul {
+  padding-left: 1.2rem;
+}
+
+/* .BTS-box {
   text-align: center;
   padding: 30px;
   border-radius: 20px;
-}
+} */
 
 .BTS-title {
   font-size: 34px;
   font-weight: bold;
   text-transform: uppercase;
+  text-align: center;
   margin-bottom: 15px;
   border-bottom: 3px solid var(--secondary-color);
   display: inline-block;
@@ -266,7 +328,7 @@ table {
   margin-top: 30px;
 }
 
-.BTS-module {
+/* .BTS-module {
   flex: 1 1 45%;
   min-width: 300px;
   background: rgba(255, 255, 255, 0.15);
@@ -285,7 +347,7 @@ table {
 .BTS-module p {
   font-size: 16px;
   line-height: 1.5;
-}
+} */
 
 /* Container 3 et compétences */
 .container3 {
