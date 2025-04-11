@@ -48,12 +48,13 @@ body {
 
 .navigation a {
   color: var(--secondary-color);
-  transition: color 0.3s;
+  transition: color 0.3s, transform 0.3s ease;
   padding: 0px 10px;
 }
 
 .navigation a:hover {
   color: var(--hover-color);
+  transform: scale(1.05);
 }
 
 .navigation.scrolled {
@@ -82,29 +83,36 @@ body {
   position: relative;
   padding-bottom: 20px;
   color: var(--secondary-color);
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 #projectsMenu:hover {
   color: var(--hover-color);
   cursor: pointer;
+  transform: scale(1.05);
 }
 
 .dropdown {
   position: relative;
 }
 
-.subMenu {
+/* .subMenu {
   display: none;
   position: absolute;
   min-width: 200px;
   margin-top: 15.5px;
   top: 100%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) scaleY(0);
+  transform-origin: top;
   text-align: center;
   z-index: 100;
+  opacity: 0;
   transition: all 0.5s ease-in-out;
+} */
 
+.subMenu {
+  display: none;
 }
 
 .subMenu a {
@@ -114,24 +122,45 @@ body {
   display: block;
   padding: 12px 20px;
   mix-blend-mode: multiply;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.subMenu a:hover {
+  transform: translateX(5px);
 }
 
 .dropdown:hover .subMenu {
   display: block;
+  transform: translateX(-50%) scaleY(1);
+  opacity: 1;
 }
 
+/* === Bouton burger === */
 .burger {
   display: none;
   flex-direction: column;
   cursor: pointer;
+  gap: 5px;
 }
 
 .burger span {
-  background: #fff;
-  height: 3px;
   width: 25px;
-  margin: 4px;
-  display: block;
+  height: 3px;
+  background-color: var(--secondary-color);
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.burger.open span:nth-child(1) {
+  transform: rotate(45deg) translateY(8px);
+}
+
+.burger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger.open span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-8px);
 }
 
 .container {
@@ -213,7 +242,7 @@ table {
   margin: 10px;
 }
 
-/* Container 2 et compétences */
+/* Container 2 */
 .container2 {
   width: 90%;
   max-width: 1200px;
@@ -310,7 +339,7 @@ table {
   color: var(--primary-color);
 }
 
-/* Container 3 et compétences */
+/* Container 3 */
 .container3 {
   color: var(--text-color);
   width: 100%;
@@ -339,7 +368,6 @@ table {
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 30px;
   justify-content: center;
-  /* padding: 20px; */
 }
 
 .competences-list li {
@@ -370,16 +398,12 @@ table {
 
 /*-------------------------Style parcours.html-------------------------*/
 #section-parcours {
-  /* position: relative; */
-  /* min-height: 150vh; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 10vh 5vw;
 }
-
-
 
 .box {
   width: max-content;
@@ -388,8 +412,6 @@ table {
   padding: 40px;
   border-radius: 30px;
 }
-
-
 
 #parcours-box {
   display: flex;
@@ -841,31 +863,112 @@ table {
 }
 
 /*-------------------------Responsive design-------------------------*/
+@media (min-width: 769px) {
+  .subMenu {
+    position: absolute;
+    min-width: 200px;
+    margin-top: 15.5px;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) scaleY(0);
+    transform-origin: top;
+    text-align: center;
+    z-index: 100;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .dropdown:hover .subMenu {
+    display: block;
+    transform: translateX(-50%) scaleY(1);
+    opacity: 1;
+  }
+
+  .subMenu a {
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid var(--secondary-color);
+  }
+
+  .subMenu a:hover {
+    transform: translateX(5px);
+  }
+}
+
 @media (max-width: 768px) {
   .navigation {
     padding: 10px;
     flex-direction: column;
     align-items: center;
   }
-  .menu {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    background: #333;
-    width: 100%;
-    top: 60px;
-    left: 0;
-  }
-  .menu.active {
-      display: flex;
-  }
   .burger {
     display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    z-index: 101;
+  }
+  .menu {
+    flex-direction: column;
+    position: absolute;
+    top: 48px;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    border-bottom: none;
+
+  }
+  .menu.active {
+    max-height: 500px;
+    border-bottom: 1px solid white;
+  }
+  .menu.active::after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 100%;
   }
   .menu a {
-    padding: 10px;
+    padding: 15px 10px;
     width: 100%;
     text-align: center;
+    /* background: var(--primary-color); */
+  }
+  .dropdown:hover .subMenu {
+    display: none;
+  }
+  .subMenu {
+    display: none;
+    position: relative;
+    width: 100%;
+  }
+  .subMenu a {
+    background-color: transparent;
+    border: none;
+    text-align: left;
+    margin-left: 10rem;
+  }
+  .navigation.scrolled .subMenu {
+    position: relative;
+    margin-top: 0;
+  }
+  .navigation.scrolled .subMenu a {
+    background: none;
+    border: none;
+    text-align: left;
+    margin-left: 10rem;
+  }
+  .dropdown.submenu-open .subMenu {
+    display: block;
+  }
+  #projectsMenu {
+    width: 100%;
+    padding: 15px 10px;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
   }
   .container {
     grid-template-columns: 1fr;

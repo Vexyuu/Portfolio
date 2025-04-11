@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // Récupère l'ID de l'ancre depuis l'attribut href
       const targetId = this.getAttribute("href").substring(1);
 
-      if (targetId === "about" || targetId === "parcours" || targetId === "projets" || targetId === "contact" || targetId === "veille") {
+      if (targetId === "about" || targetId === "parcours" || targetId === "projets" || targetId === "veille"|| targetId === "E5" || targetId === "certifications" || targetId === "contact" ) {
         // Défilement doux vers le haut de la page
         window.scrollTo({
           top: 0,

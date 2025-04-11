@@ -242,7 +242,7 @@ table {
   margin: 10px;
 }
 
-/* Container 2 et compétences */
+/* Container 2 */
 .container2 {
   width: 90%;
   max-width: 1200px;
@@ -339,54 +339,62 @@ table {
   color: var(--primary-color);
 }
 
-/* Container 3 et compétences */
+/* Container 3 */
 .container3 {
-  color: var(--text-color);
-  width: 100%;
+  width: 90%;
   max-width: 1200px;
+  margin: 0 auto 150px auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  color: var(--text-color);
   background-color: rgba(255, 255, 255, 0.1);
-  margin: 0 auto;
+  border-radius: 20px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
-  border-radius: 30px;
-
 }
 
 .competences-box {
-  margin: 0 auto;
-  padding: 30px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .competences-title {
   font-size: 30px;
   text-align: center;
-  padding-top: 20px;
+  padding-bottom: 10px;
   border-bottom: 3px solid var(--secondary-color);
+  display: inline-block;
+  margin-top: 20px;
 }
 
 .competences-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 30px;
-  justify-content: center;
-  /* padding: 20px; */
+  padding: 0;
+  list-style: none;
 }
 
 .competences-list li {
-  width: 200px;
   text-align: center;
   background: rgba(255, 255, 255, 0.1);
-  padding: 10px;
+  padding: 20px;
   border-radius: 15px;
   transition: transform 0.3s ease-in-out;
 }
 
 .competences-list li:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .competences-list img {
   display: block;
   margin: 0 auto;
+  width: 80px;
+  height: auto;
+  max-width: 100%;
 }
 
 .competences-list p {
@@ -396,19 +404,56 @@ table {
   color: var(--text-color);
 }
 
+/* footer */
+.footer {
+  background: linear-gradient(to right, #141e30, #243b55);
+  padding: 20px 0;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 50px;
+  border-top: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-name {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-link {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-weight: 500;
+}
+
+.footer-link:hover {
+  color: #00bcd4;
+}
 
 /*-------------------------Style parcours.html-------------------------*/
 #section-parcours {
-  /* position: relative; */
-  /* min-height: 150vh; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 10vh 5vw;
 }
-
-
 
 .box {
   width: max-content;
@@ -417,8 +462,6 @@ table {
   padding: 40px;
   border-radius: 30px;
 }
-
-
 
 #parcours-box {
   display: flex;
@@ -749,6 +792,34 @@ table {
   padding: 15px;
 }
 
+/*-------------------------Tableau de synthèse-------------------------*/
+.tableau-description {
+  font-size: 1.2rem;
+  color: #ddd;
+}
+
+.tableau-link {
+  display: inline-block;
+  margin: 30px 0;
+  padding: 10px 20px;
+  color: var(--text-color);
+  background-color: var(--primary-color);
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.3s ease-in-out;
+}
+.tableau-link:hover {
+  background-color: var(--hover-color);
+}
+
+.tableau-image {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
 /*-------------------------certification.html-------------------------*/
 .certifications-container, .veille-container {
   display: flex;
@@ -903,6 +974,13 @@ table {
 }
 
 @media (max-width: 768px) {
+  /* Global Styles */
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 1.5rem;
+  }
+  p {
+    font-size: 1rem;
+  }
   .navigation {
     padding: 10px;
     flex-direction: column;
@@ -977,74 +1055,52 @@ table {
     text-align: center;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
   }
+  /* Container 1 */
+  
   .container {
     grid-template-columns: 1fr;
   }
-  .infoBox h1 {
-    font-size: 40px;
-  }
-
-  .infoBox h3 {
-    font-size: 20px;
-  }
-
   .box {
     padding: 20px;
   }
-
-  .qualites-box ul,
-  .competences-box ul {
-    flex-direction: column;
-    align-items: center;
+  /* Container 3 */
+  .competences-list img {
+    width: 60px;
   }
-
-  .qualites-box li,
-  .competences-box li {
-    margin: 10px 0;
-    font-size: 18px;
-  }
-
   .photo img {
     width: 150px;
   }
-
   #parcours-box {
     flex-direction: column;
     align-items: center;
   }
-
   .parcours-column {
     width: 90%;
   }
-
   .projet {
     flex-direction: column !important;
     text-align: center;
   }
-
   .projet-image img {
     width: 80%;
   }
-
   .container-contact {
     max-width: 100%;
     padding: 20px;
   }
-
-  .container-contact h2 {
-      font-size: 1.8rem;
-  }
-
-  .container-contact p {
-      font-size: 1rem;
-  }
-
   .container-contact .reseaux a {
       font-size: 1rem;
   }
 }
 
 @media (max-width: 480px) {
+  /* Global Styles */
+  h1, h2, h3, h4, h5, h6 {
+      font-size: 1.2rem;
+  }
+  p {
+      font-size: 0.9rem;
+  }
   .container-contact h2 {
       font-size: 1.5rem;
   }
