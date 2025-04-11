@@ -34,18 +34,53 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Barre de navigation
 window.addEventListener("scroll", function() {
-  const navbar = this.document.querySelector(".navigation");
-  if (this.window.scrollY > 100) {
+  const navbar = document.querySelector(".navigation");
+  if (window.scrollY > 100) {
     navbar.classList.add("scrolled");
   } else {
     navbar.classList.remove("scrolled");
   }
-})
-
-// Barre de navigation responsive
-document.querySelector('.burger').addEventListener('click', function() {
-  document.querySelector('.menu').classList.toggle('active');
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const burger = document.querySelector('.burger');
+  const menu = document.querySelector('.menu');
+  const dropdown = document.querySelector('.dropdown');
+
+  // Toggle menu (mobile)
+  burger.addEventListener('click', () => {
+    burger.classList.toggle('open');
+    menu.classList.toggle('active');
+  });
+
+  // Toggle submenu on mobile
+  const projectsMenu = document.getElementById('projectsMenu');
+  projectsMenu.addEventListener('click', (e) => {
+    // uniquement sur mobile
+    if (window.innerWidth <= 768) {
+      e.preventDefault();
+      dropdown.classList.toggle('submenu-open');
+    }
+  });
+});
+// Barre de navigation responsive
+// const projectsMenu = document.getElementById("projectsMenu");
+// const subMenu = document.querySelector(".subMenu");
+
+// projectsMenu.addEventListener("click", () => {
+//   if (window.innerWidth <= 768) {
+//     subMenu.classList.toggle("open");
+//   }
+// });
+
+
+// const burger = document.querySelector('.burger');
+// const menu = document.querySelector('.menu');
+
+// burger.addEventListener('click', () => {
+//   menu.classList.toggle('active');
+//   burger.classList.toggle('open'); // animation croix
+// });
 
 // Cartes des spécialités Spécialité SLAM & SISR
 function toggleCard(card) {
