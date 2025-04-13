@@ -1,11 +1,13 @@
 /* Variables */
 :root {
-  --primary-color: #919ee9;
+  /* --primary-color: #919ee9; */
+  --primary-color: #7282d8;
   --secondary-color: #ffffff;
   --background-color: #121212;
   --background: linear-gradient(145deg, #0f172a, #1e293b);
   --text-color: #ffffff;
-  --hover-color: #6f82e6;
+  /* --hover-color: #6f82e6; */
+  --hover-color: #4b62d3;
   --shadow-color: rgba(0, 0, 0, 0.2);
   --font-main: 'Poppins', sans-serif;
 }
@@ -1122,7 +1124,6 @@ table {
       font-size: 0.9rem;
   }
 }
-
 
 /* -------------------------KeyFrames------------------------- */
 @keyframes fadeIn {

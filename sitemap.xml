@@ -1,10 +1,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://ton-site.com/</loc>
+        <loc>https://vexyuu.github.io/Portfolio/index.html</loc>
         <priority>1.0</priority>
+        <lastmod>2025-04-12</lastmod>
     </url>
     <url>
-        <loc>https://ton-site.com/projets</loc>
+        <loc>https://vexyuu.github.io/Portfolio/page.parcours.html</loc>
+        <priority>0.9</priority>
+        <lastmod>2025-04-12</lastmod>
+    </url>
+    <url>
+        <loc>https://vexyuu.github.io/Portfolio/page.projetsPersonnels.html</loc>
         <priority>0.8</priority>
+        <lastmod>2025-04-12</lastmod>
+    </url>
+        <url>
+        <loc>https://vexyuu.github.io/Portfolio/page/projetsAcademiques.html</loc>
+        <priority>0.7</priority>
+        <lastmod>2025-04-12</lastmod>
+    </url>
+    <url>
+        <loc>https://vexyuu.github.io/Portfolio/page/veille.html</loc>
+        <priority>0.6</priority>
+        <lastmod>2025-04-12</lastmod>
+    </url>
+    <url>
+        <loc>https://vexyuu.github.io/Portfolio/page/E5.html</loc>
+        <priority>0.5</priority>
+        <lastmod>2025-04-12</lastmod>
+    </url>
+    <url>
+        <loc>https://vexyuu.github.io/Portfolio/page/certifications.html</loc>
+        <priority>0.4</priority>
+        <lastmod>2025-04-12</lastmod>
+    </url>
+        <url>
+        <loc>https://vexyuu.github.io/Portfolio/page/contact.html</loc>
+        <priority>0.3</priority>
+        <lastmod>2025-04-12</lastmod>
     </url>
 </urlset>
