@@ -51,14 +51,16 @@
     <meta name="apple-mobile-web-app-title" content="Portfolio Killian">
 
     <!-- Sécurité / Performances -->
-    <meta http-equiv="Content-Security-Policy"
-        content="default-src 'self'; script-src 'self' https://kit.fontawesome.com https://gc.zgo.at; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com;">
+    <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    script-src 'self' https://kit.fontawesome.com https://gc.zgo.at 'unsafe-inline';
+    style-src 'self' https://fonts.googleapis.com 'unsafe-inline';
+    font-src 'self' https://fonts.gstatic.com https://use.fontawesome.com;
+    img-src 'self' data:;
+    connect-src 'self';">
 
     <!-- Favicon -->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-
-    <!-- 👁️ Statistiques GoatCounter -->
-    <script data-goatcounter="https://monportfolio.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 
     <!-- 👁️ Statistiques GoatCounter -->
     <script data-goatcounter="https://monportfolio.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
