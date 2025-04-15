@@ -3,15 +3,17 @@
   /* --primary-color: #919ee9; */
   --primary-color: #7282d8;
   --secondary-color: #ffffff;
-  --background-color: #121212;
+  /* --background-color: #121212; */
   --background: linear-gradient(145deg, #0f172a, #1e293b);
+  --background-container: rgba(255, 255, 255, 0.1);
   --text-color: #ffffff;
-  /* --hover-color: #6f82e6; */
   --hover-color: #4b62d3;
+  --border-color: #6f82e6;
   --shadow-color: rgba(0, 0, 0, 0.2);
   --font-main: 'Poppins', sans-serif;
 }
 
+/* Global Styles */
 * {
   list-style: none;
   text-decoration: none;
@@ -19,7 +21,6 @@
 }
 
 body {
-  background-color: var(--background-color);
   font-family: var(--font-main);
   margin: 0;
   padding: 0;
@@ -118,8 +119,8 @@ body {
 }
 
 .subMenu a {
-  background-color: rgba(255, 255, 255, 0.1);
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  background-color: var(--background-container);
+  box-shadow: 0px 4px 10px var(--shadow-color);
   border: 1px solid var(--secondary-color);
   display: block;
   padding: 12px 20px;
@@ -176,12 +177,13 @@ body {
 
 .infoBox {
   margin-left: 20px;
-  text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+  text-shadow: 2px 2px 5px var(--shadow-color);
 }
 
 .infoBox h1 {
   margin: 0;
   font-size: 50px;
+  text-wrap: balance;
 }
 
 .infoBox h3 {
@@ -201,13 +203,13 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: var(--background-container);
   width: max-content;
   height: max-content;
   margin: auto;
   padding: 40px;
   border-radius: 30px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 4px 10px var(--shadow-color);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
@@ -255,15 +257,15 @@ table {
   padding: 1rem;
   padding: 20px;
   color: var(--text-color);
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: var(--background-container);
   border-radius: 20px;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 4px 15px var(--shadow-color);
 }
 
 .container2 .card {
   border-radius: 15px;
-  background: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background: var(--background-container);
+  box-shadow: 0 14px 12px var(--shadow-color);
   padding: 1rem 1.5rem;
   cursor: pointer;
   transition: all 0.5s ease-in-out;
@@ -351,9 +353,9 @@ table {
   flex-direction: column;
   gap: 2rem;
   color: var(--text-color);
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: var(--background-container);
   border-radius: 20px;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 4px 15px var(--shadow-color);
 }
 
 .competences-box {
@@ -381,7 +383,7 @@ table {
 
 .competences-list li {
   text-align: center;
-  background: rgba(255, 255, 255, 0.1);
+  background-color: var(--background-container);
   padding: 20px;
   border-radius: 15px;
   transition: transform 0.3s ease-in-out;
@@ -410,10 +412,10 @@ table {
 .footer {
   background: linear-gradient(to right, #141e30, #243b55);
   padding: 20px 0;
-  color: #ffffff;
+  color: var(--text-color);
   text-align: center;
   margin-top: 50px;
-  border-top: 2px solid rgba(255, 255, 255, 0.1);
+  background-color: var(--background-container);
 }
 
 .footer-container {
@@ -438,7 +440,7 @@ table {
 }
 
 .footer-link {
-  color: #ffffff;
+  color: var(--text-color);
   text-decoration: none;
   transition: color 0.3s ease;
   font-weight: 500;
@@ -473,8 +475,8 @@ table {
   width: 90%;
   padding: 30px;
   border-radius: 12px;
-  background-color: rgba(255, 255, 255, 0.1);
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  background-color: var(--background-container);
+  box-shadow: 0px 4px 10px var(--shadow-color);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
@@ -488,8 +490,8 @@ table {
   min-width: 300px;
   padding: 25px;
   border-radius: 12px;
-  background: rgba(255, 255, 255, 0.15);
-  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+  background: var(--background-container);
+  box-shadow: 0px 3px 10px var(--shadow-color);
 
 }
 
@@ -497,7 +499,7 @@ table {
   text-align: center;
   font-size: 1.8rem;
   margin-bottom: 20px;
-  border-bottom: 4px solid #919ee9;
+  border-bottom: 4px solid var(--border-color);
   padding-bottom: 12px;
 }
 
@@ -543,7 +545,7 @@ table {
   height: 14px;
   background-color: white;
   border-radius: 50%;
-  border: 3px solid #919ee9;
+  border: 3px solid var(--border-color);
   position: absolute;
   left: -20px;
   top: 15%;
@@ -564,7 +566,7 @@ table {
 .date {
   position: relative;
   right: 0;
-  background-color: #4c5c96;
+  background-color: var(--border-color);
   padding: 5px 10px;
   border-radius: 5px;
   font-size: 14px;
@@ -587,10 +589,10 @@ table {
   margin-top: 80px;
   font-size: 2rem;
   font-style: italic;
-  background-color: #919ee9;
+  background-color: var(--border-color);
   padding: 15px 40px;
   border-radius: 30px 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 10px var(--shadow-color);
   text-align: center;
 }
 
@@ -623,10 +625,10 @@ table {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: var(--background-container);
   padding: 30px;
   border-radius: 15px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 4px 10px var(--shadow-color);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
@@ -653,7 +655,7 @@ table {
 }
 
 .description-projet h2 {
-  color: #919ee9;
+  color: var(--primary-color);
 }
 
 .description-projet h3 {
@@ -665,7 +667,7 @@ table {
   font-size: 1.2rem;
   font-weight: bold;
   margin-top: 10px;
-  color: #919ee9;
+  color: var(--primary-color);
 }
 
 
@@ -688,11 +690,6 @@ table {
 .description-projet a:hover, .infoBox a:hover, .reseaux a:hover {
   background-color: var(--hover-color);
 }
-
-/* .description-projet a:hover {
-  background-color: #444;
-  cursor:not-allowed;
-} */
 
 /* Images */
 .projet-image {
@@ -788,8 +785,8 @@ table {
 .veille-card {
   width: 600px;
   border-radius: 10px;
-  background: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: var(--background-container);
+  box-shadow: 0 4px 12px var(--shadow-color);
   text-align: center;
   padding: 15px;
 }
@@ -797,7 +794,7 @@ table {
 /*-------------------------Tableau de synthèse-------------------------*/
 .tableau-description {
   font-size: 1.2rem;
-  color: #ddd;
+  color: var(--text-color);
 }
 
 .tableau-link {
@@ -819,7 +816,7 @@ table {
   max-width: 800px;
   height: auto;
   border-radius: 15px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 4px 10px var(--shadow-color);
 }
 
 /*-------------------------certification.html-------------------------*/
@@ -833,7 +830,7 @@ table {
 .certification-card {
   width: 300px;
   border-radius: 10px;
-  background: rgba(255, 255, 255, 0.1);
+  background-color: var(--background-container);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 
   text-align: center;
@@ -852,8 +849,8 @@ table {
 }
 
 .certification-card h4 {
-  font-size: 14px;
-  color: #666;
+  font-size: 18px;
+  color: var(--primary-color);
 }
 
 .certification-card p, .veille-card p {
@@ -865,7 +862,7 @@ table {
   display: inline-block;
   padding: 8px 12px;
   background: var(--primary-color);
-  color: #fff;
+  color: var(--text-color);
   border-radius: 5px;
   text-decoration: none;
 }
@@ -880,9 +877,9 @@ table {
   width: 100%;
   max-width: 600px;
   padding: 30px;
-  background: rgba(255, 255, 255, 0.1);
+  background-color: var(--background-container);
   border-radius: 15px;
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 10px 20px var(--shadow-color);
   text-align: center;
   backdrop-filter: blur(10px);
 }
@@ -895,7 +892,7 @@ table {
 
 .container-contact p {
   font-size: 1.1rem;
-  color: #e0e0e0;
+  color: var(--text-color);
   margin-bottom: 10px;
 }
 
@@ -923,7 +920,7 @@ table {
 .container-contact input:focus,
 .container-contact textarea:focus {
   outline: none;
-  border-color: #6f82e6;
+  border-color: var(--border-color);
   background: rgba(255, 255, 255, 0.3);
 }
 
@@ -932,14 +929,14 @@ table {
   padding: 12px;
   border: none;
   border-radius: 5px;
-  background-color: #919ee9;
+  background-color: var(--border-color);
   font-size: 1rem;
   cursor: pointer;
   transition: 0.3s;
 }
 
 .container-contact button:hover {
-  background-color: #6f82e6;
+  background-color: var(--hover-color);
 }
 
 /*-------------------------Responsive design-------------------------*/
@@ -965,8 +962,8 @@ table {
   }
 
   .subMenu a {
-    background-color: rgba(255, 255, 255, 0.1);
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    background-color: var(--background-container);
+    box-shadow: 0px 4px 10px var(--shadow-color);
     border-bottom: 1px solid var(--secondary-color);
   }
 
@@ -1055,7 +1052,7 @@ table {
     width: 100%;
     padding: 15px 10px;
     text-align: center;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: var(--background-container);
   }
   /* Container 1 */
   
