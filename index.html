@@ -46,7 +46,7 @@
     <!-- Remplace avec une vraie image visible en ligne -->
 
     <!-- Apple / Mobile -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta name="apple-mobile-web-app-title" content="Portfolio Killian">
 
@@ -57,13 +57,15 @@
         style-src 'self' https://fonts.googleapis.com 'unsafe-inline';
         font-src 'self' https://fonts.gstatic.com https://use.fontawesome.com;
         img-src 'self' data:;
-        connect-src 'self';">
+        connect-src 'self' https://monportfolio.goatcounter.com;">
 
     <!-- Favicon -->
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- <link rel="icon" href="favicon.ico" type="image/x-icon"> -->
 
     <!-- Statistiques anonymes (GoatCounter) -->
-    <script data-goatcounter="https://monportfolio.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+    <script data-goatcounter="https://monportfolio.goatcounter.com/count" async
+        src="https://gc.zgo.at/count.js"></script>
+    <!-- <script data-goatcounter="https://monportfolio.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script> -->
 </head>
 
 <body>
@@ -102,10 +104,10 @@
                     <h1>Bonjour, je m'appelle Killian Fievet</h1>
                     <p id="barre"></p>
                     <h2>Bienvenue sur mon Portfolio</h2>
-                    <p id="paragrapheStart">Actuellement en formation,<br>
-                        Je vous propose ce portfolio de retrouver les différentes études,<br>
-                        et projet professionnel que j'ai pu entreprendre au sein de ma carrière.<br>
-                        Vous pouvez consulter mon CV et mes projets ici.</p>
+                    <p id="paragrapheStart">Actuellement étudiant,<br>
+                        Je vous invite à découvrir à travers ce Portfolio les différentes études,<br>
+                        et projet professionnel que j'ai pu réalisés.<br>
+                        Vous y trouverez également mon CV ainsi qu'un aperçu de mes travaux et réalisations.</p>
                     <a href="./annexe/CV_Alternance_Sorbonne_2025.pdf" target="_blank"><i class="fas fa-download"></i>
                         Lien vers le CV</a>
                 </div>
@@ -228,7 +230,7 @@
                             <p>React native - Développement d’applications mobiles</p>
                         </li>
                     </ul>
-                    <h1 class="competences-title">Mes outils / logiciel ⚙️</h1>
+                    <h1 class="competences-title">Mes outils / logiciels ⚙️</h1>
                     <ul class="competences-list">
                         <li>
                             <img src="./image/VsCode.png" alt="Visual Studio Code">
