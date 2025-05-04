@@ -637,17 +637,6 @@ table {
   box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Alternance entre gauche et droite */
-.projet-left {
-  flex-direction: row-reverse;
-}
-
-.projet-right {
-  flex-direction: row-reverse;
-}
-
-.projet
-
 /* Description */
 .description-projet {
   flex: 1;
@@ -713,6 +702,8 @@ table {
   border-radius: 10px;
   transition: opacity 0.5s ease-in-out;
   width: 90%;
+  max-width: 800px;
+  max-height: 400px;
   cursor: zoom-in;
 }
 

@@ -1,35 +1,14 @@
 const projetsImages = {
     1: [
-        // "../image/projets/OrderByYou_1.jpg",
-        // "../image/projets/OrderByYou_2.jpg",
-        // "../image/projets/OrderByYou_3.jpg"
-        "../image/projets/no-image.jpg",
-        "../image/projets/no-image2.png",
-        "../image/projets/no-image.jpg"
+        "../image/projets/Password_Generator_1.jpg",
     ],
     2: [
-        // "../image/projets/passwordgen-1.jpg",
-        // "../image/projets/passwordgen-2.jpg",
-        // "../image/projets/passwordgen-3.jpg"
-        "../image/projets/no-image.jpg",
-        "../image/projets/no-image2.png",
-        "../image/projets/no-image.jpg"
+        "../image/projets/BillyIA_1.jpg"
     ],
     3: [
-        // "../image/projets/ordicare-1.jpg",
-        // "../image/projets/ordicare-2.jpg",
-        // "../image/projets/ordicare-3.jpg"
-        "../image/projets/no-image.jpg",
-        "../image/projets/no-imag2.png",
-        "../image/projets/no-image.jpg"
-    ],
-    4: [
-        // "../image/projets/ordicare-1.jpg",
-        // "../image/projets/ordicare-2.jpg",
-        // "../image/projets/ordicare-3.jpg"
-        "../image/projets/no-image.jpg",
-        "../image/projets/no-imag2.png",
-        "../image/projets/no-image.jpg"
+        "../image/projets/CookMe_1.jpg",
+        "../image/projets/CookMe_2.jpg",
+        "../image/projets/CookMe_3.jpg"
     ]
 };
 
@@ -37,7 +16,7 @@ const projetsImages = {
 document.querySelectorAll(".carousel").forEach(carousel => {
     const projectId = carousel.getAttribute("data-project");
     const images = projetsImages[projectId];
-    
+
     let currentIndex = 0;
     const carouselImage = carousel.querySelector(".carousel-image");
     const prevButton = carousel.querySelector(".prev");
@@ -80,7 +59,7 @@ document.querySelectorAll(".carousel").forEach(carousel => {
     });
 });
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const nbProjects = document.querySelector("#projet-numbers");
     const arrayProjetsImages = Object.keys(projetsImages);
     console.log(arrayProjetsImages);

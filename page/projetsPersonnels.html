@@ -31,6 +31,8 @@
     <!-- 📱 Responsive / Affichage / Style -->
     <link rel="stylesheet" href="../css/style.css">
     <script defer src="../js/script.js"></script>
+    <script defer src="../js/projetsPerso.js"></script>
+    <script defer src="../js/imageController.js"></script>
     <script src="https://kit.fontawesome.com/feb76b5a58.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
@@ -56,18 +58,17 @@
     default-src 'self';
     script-src 'self' https://kit.fontawesome.com https://gc.zgo.at 'unsafe-inline';
     style-src 'self' https://fonts.googleapis.com 'unsafe-inline';
-    font-src 'self' https://fonts.gstatic.com https://use.fontawesome.com;
+    font-src 'self' https://fonts.gstatic.com https://ka-f.fontawesome.com;
     img-src 'self' data:;
-    connect-src 'self';">
+    connect-src 'self' https://monportfolio.goatcounter.com;">
 
     <!-- Favicon -->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon-512.png" type="image/png">
 
-    <!-- 👁️ Statistiques GoatCounter -->
-    <script data-goatcounter="https://monportfolio.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
-
-    <!-- 👁️ Statistiques GoatCounter -->
-    <script data-goatcounter="https://monportfolio.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+    <!-- Statistiques anonymes (GoatCounter) -->
+    <script data-goatcounter="https://monportfolio.goatcounter.com/count" async
+        src="https://gc.zgo.at/count.js"></script>
 </head>
 
 <body>
@@ -111,134 +112,107 @@
 
             <div class="projets-box">
                 <!-- Projet 1 -->
-                <div class="projet projet-left">
+                <div class="projet projet-right">
+                    <div class="projet-image carousel" data-project="1">
+                        <button class="prev">&lt;</button>
+                        <img src="../image/projets/Password_Generator_1.jpg" class="carousel-image"
+                            alt="Image du projet Password Generator" onclick="openImageModal(this.src)">
+                        <button class="next">&gt;</button>
+                        <div class="carousel-indicators"></div>
+                    </div>
                     <div class="description-projet">
-                        <h2><i class="fas fa-code"></i> Projet 1</h2>
-                        <h3><i class="fas fa-globe"></i> ShopWise</h3>
-                        <h4>📌 description</h4>
-                        <p>ShopWise est une plateforme interactive qui permet aux utilisateurs de parcourir et filtrer
-                            des produits en fonction de leurs préférences.
-                            Le projet repose sur une interface dynamique qui affiche des marques et leurs produits
-                            associés.</p>
+                        <h2><i class="fas fa-key"></i> Projet 1</h2>
+                        <h3><i class="fas fa-lock"></i> Password Generator</h3>
+                        <h4>📌 Description</h4>
+                        <p>Password Generator est un outil permettant de générer des mots de passe sécurisés en fonction
+                            des préférences de l'utilisateur (longueur, présence de caractères spéciaux, chiffres,
+                            majuscules/minuscules).</p>
                         <h4>🛠️ Technologies utilisées</h4>
                         <ul>
-                            <li><b>HTML, CSS, JavaScript :</b> Structure et style du site.</li>
-                            <li><b>Fetch API :</b> Pour récupérer dynamiquement les marques et produits depuis une base
-                                de données.</li>
-                            <li><b>PHP & MySQL :</b> Gestion des données avec WampServer64 et PHPMyAdmin.</li>
+                            <li><b>HTML, CSS, JavaScript :</b> Interface simple et intuitive.</li>
+                            <li><b>JavaScript (Math.random) :</b> Génération aléatoire des caractères.</li>
+                            <li><b>Clipboard API :</b> Permet de copier directement le mot de passe généré.</li>
                         </ul>
                         <h4>🎯 Objectifs</h4>
                         <ul>
-                            <li>Créer une expérience utilisateur fluide avec un affichage dynamique des produits.</li>
-                            <li>Mettre en place un système de filtrage efficace.</li>
-                            <li>Améliorer l'interaction avec des animations et une navigation intuitive.</li>
+                            <li>• Offrir un moyen rapide et sécurisé de générer des mots de passe robustes.</li>
+                            <li>• Permettre à l’utilisateur de personnaliser ses préférences.</li>
+                            <li>• Assurer une interface ergonomique et responsive.</li>
                         </ul>
-                        <!-- <a href="https://Vexyuu.github.io/ShopWise" target="_blank">🔗 Lien vers le projet</a> -->
                         <a href="">🔗 Lien vers le projet</a>
                     </div>
-                    <div class=" projet-image carousel" data-project="1">
+                </div>
+
+                <!-- Projet 2 -->
+                <div class="projet projet-left">
+                    <div class="description-projet">
+                        <h2>Projet 2 <i>(en cours)</i></h2>
+                        <h3>Assistant IA - Billy.IA</h3>
+                        <h4>📌 Description</h4>
+                        <p>Billy.IA est un chatbot qui a pour objectif d'évoluer avec un système d'Intelligence
+                            Artificielle intégré. Actuellement, il peut répondre à des questions simples en s'appuyant
+                            sur un jeu de données prédéfini.
+                            Le projet est régulièrement mis à jour afin d'améliorer ses performances et ses capacités.
+                        </p>
+                        <h4>🛠️ Technologies utilisées</h4>
+                        <ul>
+                            <li>• <b>Python :</b> Langage principal utilisé pour la logique et le traitement</li>
+                            <li>• <b>TKinter :</b> Création de l'interface graphique de l'application</li>
+                        </ul>
+                        <h4>🎯 Objectifs</h4>
+                        <ul>
+                            <li>
+                                • Développer un assistant IA capable de comprendre et de répondre de manière plus
+                                naturelle à l'utilisateur.<br>
+                                • Ajouter une base de connaissances évolutive, intégrer du traitement du langage naturel
+                                (NLP) et proposer, à terme, une interface vocale interactive.
+                            </li>
+                        </ul>
+                        <!-- <a href="https://Vexyuu.github.io/OrdiCare" target="_blank">🔗 Lien vers le projet</a> -->
+                        <a href="">🔗 Lien vers le projet</a>
+                    </div>
+                    <div class="projet-image carousel" data-project="1">
                         <button class="prev">&lt;</button>
-                        <img src="../image/projets/no-image.jpg" class="carousel-image" alt="Image test"
+                        <img src="../image/projets/BillyIA_1.jpg" class="carousel-image" alt="Image du projet Billy.IA"
                             onclick="openImageModal(this.src)">
                         <button class="next">&gt;</button>
                         <div class="carousel-indicators"></div>
                     </div>
                 </div>
 
-                <!-- Projet 2 -->
-                <div class="projet projet-right">
-                    <div class="projet-image carousel" data-project="2">
-                        <button class="prev">&lt;</button>
-                        <img src="../image/projets/no-image.jpg" class="carousel-image" alt="Image test">
-                        <button class="next">&gt;</button>
-                        <div class="carousel-indicators"></div>
-                    </div>
-                    <div class="description-projet">
-                        <h2><i class="fas fa-key"></i> Projet 2</h2>
-                        <h3><i class="fas fa-lock"></i> Password Generator</h3>
-                        <h4>📌 description</h4>
-                        <p>Password Generator est un outil permettant de générer des mots de passe sécurisés en fonction
-                            des préférences de l'utilisateur (longueur, présence de caractères spéciaux, chiffres,
-                            majuscules/minuscules).</p>
-                        <h4>🛠️ Technologies utilisées</h4>
-                        <ul>
-                            <li><b>HTML, CSS, JavaScript :</b> Interface simple et intuitive.</li>
-                            <li><b>JavaScript (Math.random) :</b> Génération aléatoire des caractères.</li>
-                            <li><b>Clipboard API :</b> Permet de copier directement le mot de passe généré.</li>
-                        </ul>
-                        <h4>🎯 Objectifs</h4>
-                        <ul>
-                            <li>Offrir un moyen rapide et sécurisé de générer des mots de passe robustes.</li>
-                            <li>Permettre à l’utilisateur de personnaliser ses préférences.</li>
-                            <li>Assurer une interface ergonomique et responsive.</li>
-                        </ul>
-                        <!-- <a href="https://Vexyuu.github.io/PasswordGenerator" target="_blank">🔗 Lien vers le projet</a> -->
-                        <a href="">🔗 Lien vers le projet</a>
-                    </div>
-                </div>
-
                 <!-- Projet 3 -->
-                <div class="projet projet-left">
-                    <div class="description-projet">
-                        <h2>Projet 3 <i>(en cours)</i></h2>
-                        <h3>Assistant IA</h3>
-                        <h4>📌 description</h4>
-                        <p>BLABLABLA</p>
-                        <h4>🛠️ Technologies utilisées</h4>
-                        <ul>
-                            <li>Lorem Ipsum Qui cum venisset ob haec festinatis itineribus Antiochiam, praestrictis
-                                palatii ianuis,
-                                contempto Caesare, quem videri decuerat, ad praetorium cum pompa sollemni perrexit
-                                morbosque diu causatus nec regiam introiit nec processit in publicum, sed abditus multa
-                                in eius moliebatur exitium addens quaedam relationibus supervacua, quas subinde
-                                dimittebat ad principem.</li>
-                        </ul>
-                        <h4>🎯 Objectifs</h4>
-                        <ul>
-                            <li>Lorem Ipsum Qui cum venisset ob haec festinatis itineribus Antiochiam, praestrictis
-                                palatii ianuis,
-                                contempto Caesare, quem videri decuerat, ad praetorium cum pompa sollemni perrexit
-                                morbosque diu causatus nec regiam introiit nec processit in publicum, sed abditus multa
-                                in eius moliebatur exitium addens quaedam relationibus supervacua, quas subinde
-                                dimittebat ad principem.</li>
-                        </ul>
-                        <!-- <a href="https://Vexyuu.github.io/OrdiCare" target="_blank">🔗 Lien vers le projet</a> -->
-                        <a href="">🔗 Lien vers le projet</a>
-                    </div>
+                <div class="projet projet-right">
                     <div class="projet-image carousel" data-project="3">
                         <button class="prev">&lt;</button>
-                        <img src="../image/projets/no-image.jpg" class="carousel-image" alt="Image test">
-                        <button class="next">&gt;</button>
-                        <div class="carousel-indicators"></div>
-                    </div>
-                </div>
-
-                <!-- Projet 4 -->
-                <div class="projet projet-right">
-                    <div class="projet-image carousel" data-project="4">
-                        <button class="prev">&lt;</button>
-                        <img src="../image/projets/no-image.jpg" class="carousel-image" alt="Image test">
+                        <img src="../image/projets/CookMe_1.jpg" class="carousel-image" alt="Image du projet CookMe"
+                            onclick="openImageModal(this.src)">
                         <button class="next">&gt;</button>
                         <div class="carousel-indicators"></div>
                     </div>
                     <div class="description-projet">
                         <h2><i class="fas fa-key"></i> Projet 3 <i>(en cours)</i></h2>
                         <h3><i class="fas fa-lock"></i> CookMe</h3>
-                        <h4>📌 description</h4>
-                        <p>Password Generator est un outil permettant de générer des mots de passe sécurisés en fonction
-                            des préférences de l'utilisateur (longueur, présence de caractères spéciaux, chiffres,
-                            majuscules/minuscules).</p>
+                        <h4>📌 Description</h4>
+                        <p>
+                            CookMe est une application mobile communautaire dédiée à la cuisine. Les utilisateurs
+                            peuvent y partager leurs recettes, découvrir celles des autres via un carrousel dynamique et
+                            organiser leurs repas.
+                            L’application inclut un espace profil avec recettes favorites, nombre d’abonnés, objectifs
+                            caloriques, et une liste de repas planifiée pour la semaine.
+                        </p>
                         <h4>🛠️ Technologies utilisées</h4>
                         <ul>
-                            <li><b>HTML, CSS, JavaScript :</b> Interface simple et intuitive.</li>
-                            <li><b>JavaScript (Math.random) :</b> Génération aléatoire des caractères.</li>
-                            <li><b>Clipboard API :</b> Permet de copier directement le mot de passe généré.</li>
+                            <li>• <b>React Native :</b> Développement de l’interface mobile (front-end)</li>
+                            <li>• <b>Android Studio :</b> Environnement de test et de déploiement Android</li>
+                            <li>• <b>API Google / Apple / Facebook :</b> Authentification des utilisateurs via comptes
+                                existants</li>
                         </ul>
                         <h4>🎯 Objectifs</h4>
                         <ul>
-                            <li>Offrir un moyen rapide et sécurisé de générer des mots de passe robustes.</li>
-                            <li>Permettre à l’utilisateur de personnaliser ses préférences.</li>
-                            <li>Assurer une interface ergonomique et responsive.</li>
+                            <li>• Permettre aux utilisateurs de trouver facilement des idées de repas grâce aux recettes
+                                partagées</li>
+                            <li>• Favoriser l’organisation des repas hebdomadaires avec une food list intégrée</li>
+                            <li>• Créer une communauté autour de la cuisine et de la nutrition personnalisée</li>
                         </ul>
                         <!-- <a href="https://Vexyuu.github.io/PasswordGenerator" target="_blank">🔗 Lien vers le projet</a> -->
                         <a href="">🔗 Lien vers le projet</a>
