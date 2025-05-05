@@ -5,8 +5,8 @@ const projetsImages = {
         "../image/projets/OrderByYou_3.jpg"
     ],
     2: [
-        "../image/projets/OrdiCare_1.jpg",
-        "../image/projets/OrdiCare_2.jpg"
+        "../image/projets/Ordicare_1.jpg",
+        "../image/projets/Ordicare_2.jpg"
     ]
 };
 
