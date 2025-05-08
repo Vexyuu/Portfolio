@@ -30,6 +30,7 @@
     <!-- 📱 Responsive / Affichage / Style -->
     <link rel="stylesheet" href="../css/style.css">
     <script defer src="../js/script.js"></script>
+    <script defer src="../js/imageController.js"></script>
     <script src="https://kit.fontawesome.com/feb76b5a58.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
@@ -98,19 +99,30 @@
     <main>
         <section id="section-tableau">
             <h1 class="tableau-title-1">Tableau de synthèse</h1>
-            <p class="tableau-description">Ce tableau de synthèse présente mes compétences et mes expériences dans le
-                domaine du développement web. Il est conçu pour donner un aperçu rapide de mon parcours professionnel et
-                académique.</p>
-            <p class="tableau-description">Il est divisé en plusieurs sections, chacune mettant en avant un aspect
-                différent de mes compétences et de mes réalisations. Vous y trouverez des informations sur mes projets,
-                mes certifications, ainsi que mes compétences techniques.</p>
-            <p class="tableau-description">Ce tableau est un outil précieux pour les recruteurs et les employeurs
-                potentiels, leur permettant de mieux comprendre mon profil et mes capacités.</p>
-            <a href="../annexe/Fiche_Synthese_Killian_Fievet.pdf" target="_blank" class="tableau-link"><i
-                    class="fas fa-download"></i> Télécharger le PDF</a>
-            <img src="../annexe/Fiche_Synthese_Killian_Fievet.png" alt="Tableau de synthèse" class="tableau-image">
 
+            <div class="container2">
+                <p class="tableau-description">Ce tableau de synthèse présente mes compétences et mes expériences dans
+                    le
+                    domaine du développement web. Il est conçu pour donner un aperçu rapide de mon parcours
+                    professionnel et
+                    académique.</p>
+                <p class="tableau-description">Il est divisé en plusieurs sections, chacune mettant en avant un aspect
+                    différent de mes compétences et de mes réalisations. Vous y trouverez des informations sur mes
+                    projets,
+                    mes certifications, ainsi que mes compétences techniques.</p>
+                <p class="tableau-description">Ce tableau est un outil précieux pour les recruteurs et les employeurs
+                    potentiels, leur permettant de mieux comprendre mon profil et mes capacités.</p>
+                <div class="liens-E5" style="display: flex; flex-direction: row; gap: 30px;">
+                    <a href="../annexe/Fiche_Synthese_Killian_Fievet.pdf" target="_blank" class="tableau-link"><i
+                            class="fas fa-download"></i> Télécharger le PDF</a>
+                    <a href="https://www.canva.com/design/DAGmaM7JWbk/FpB1_AofieH1_sGoqJKSLA/view?utm_content=DAGmaM7JWbk&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h3f0f8686f2"
+                        target="_blank" class="tableau-link">🔗 Diapositive Fiches
+                        Profesionnelles</a>
+                </div>
 
+                <img src="../annexe/Fiche_Synthese_Killian_Fievet.png" alt="Tableau de synthèse" class="tableau-image"
+                    onclick="openImageModal(this.src)">
+            </div>
         </section>
     </main>
     <footer class="footer">
