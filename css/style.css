@@ -783,13 +783,14 @@ table {
 }
 
 /*-------------------------Tableau de synthèse-------------------------*/
-.container2 {
+.container-tableau {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   max-width: 1200px;
+  padding: 40px;
   margin: 0 auto;
   background-color: var(--background-container);
   border-radius: 20px;
